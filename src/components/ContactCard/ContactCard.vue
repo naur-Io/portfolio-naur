@@ -57,14 +57,7 @@ const copyEmail = async () => {
 
 <style scoped>
 .contact-content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 20px;
-  position: relative;
-  z-index: 2;
+  
 }
 
 .contact-text {
@@ -76,7 +69,7 @@ const copyEmail = async () => {
   margin: 0 0 8px 0;
   line-height: 1.3;
   letter-spacing: -0.2px;
-  font-size: var(--font-size-title-xl);
+  font-size: var(--font-size-title-xs);
   font-weight: var(--font-weight-semibold);
 }
 

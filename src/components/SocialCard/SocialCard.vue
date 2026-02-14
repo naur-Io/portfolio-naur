@@ -1,31 +1,21 @@
+<script setup>
+import { ref } from "vue";
+
+import soundcloudimage from "../../assets/social.png";
+</script>
+
 <template>
   <div class="card social-icons card-social">
     <div class="social-grid-inner">
-      <a href="#" class="social-item">
+      <!--Behance-->
+      <a
+        href="https://www.behance.net/rickelmeramos"
+        target="_blank"
+        class="social-item"
+      >
         <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            d="M4 4l11.733 16h4.67l-16.4-16z"
-            stroke="none"
-            fill="currentColor"
-          ></path>
-          <path
-            d="M4 20l6.768-6.768m2.46-2.46L20 4"
-            stroke="currentColor"
-            stroke-linecap="round"
-          ></path>
-        </svg>
-      </a>
-      <a href="#" class="social-item">
-        <svg
-          width="28"
-          height="28"
+          width="40"
+          height="40"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -33,13 +23,34 @@
           stroke-linecap="round"
           stroke-linejoin="round"
         >
-          <circle cx="12" cy="12" r="10"></circle>
-          <path
-            d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-5.38c-3.72-1.1-8.1-1.5-11.54 1.5M12 12a14.7 14.7 0 0 1 8.7-3.26"
-          ></path>
+          <path d="M8 20h4a3 3 0 0 0 0-6H8zm0-6h3a3 3 0 0 0 0-6H8z"></path>
+          <line x1="8" y1="14" x2="8" y2="20"></line>
+          <line x1="8" y1="8" x2="8" y2="14"></line>
+          <path d="M17 11a3 3 0 0 1 3 3v3h-6v-3a3 3 0 0 1 3-3z"></path>
+          <path d="M20 14h-6"></path>
+          <line x1="14" y1="8" x2="20" y2="8"></line>
         </svg>
       </a>
-      <a href="#" class="social-item">
+
+      <!--Soundcloud-->
+      <a
+        href="https://soundcloud.com/ruan-lucena-828574018"
+        class="social-item"
+        target="_blank"
+      >
+        <img
+          class="soundclound-img"
+          src="https://freepngimg.com/download/icon/search/8858-soundcloud-white.png"
+          alt=""
+        />
+      </a>
+
+      <!--Instagram-->
+      <a
+        href="https://www.instagram.com/por.naur/"
+        target="_blank"
+        class="social-item"
+      >
         <svg
           width="28"
           height="28"
@@ -55,7 +66,13 @@
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
         </svg>
       </a>
-      <a href="#" class="social-item">
+
+      <!--LinkedIn-->
+      <a
+        href="https://www.linkedin.com/in/ruan-rickelme-ramos-387623232/"
+        target="_blank"
+        class="social-item"
+      >
         <svg
           width="28"
           height="28"
@@ -73,26 +90,26 @@
           <circle cx="4" cy="4" r="2"></circle>
         </svg>
       </a>
-      <a href="#" class="social-item">
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M8 20h4a3 3 0 0 0 0-6H8zm0-6h3a3 3 0 0 0 0-6H8z"></path>
-          <line x1="8" y1="14" x2="8" y2="20"></line>
-          <line x1="8" y1="8" x2="8" y2="14"></line>
-          <path d="M17 11a3 3 0 0 1 3 3v3h-6v-3a3 3 0 0 1 3-3z"></path>
-          <path d="M20 14h-6"></path>
-          <line x1="14" y1="8" x2="20" y2="8"></line>
-        </svg>
+
+      <!--Youtube-->
+      <a
+        href="https://www.youtube.com/@bynaur"
+        target="_blank"
+        class="social-item"
+      >
+        <img
+          class="youtube-img"
+          src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png"
+          alt=""
+        />
       </a>
-      <a href="#" class="social-item">
+
+      <!--Mail-->
+      <a
+        href="mailto:[ruanrickelmeramos@gmail.com]"
+        target="_blank"
+        class="social-item"
+      >
         <svg
           width="28"
           height="28"
@@ -112,10 +129,21 @@
 </template>
 
 <style scoped>
+.soundclound-img {
+  width: 40px;
+  height: 40px;
+}
+
 .social-icons {
   background-color: transparent !important;
   border: none !important;
   padding: 0 !important;
+}
+
+.youtube-img {
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
 }
 
 .social-grid-inner {
@@ -124,7 +152,7 @@
   gap: 12px;
   width: 100%;
   height: 100%;
-  padding:5px
+  padding: 5px;
 }
 
 .social-item {
