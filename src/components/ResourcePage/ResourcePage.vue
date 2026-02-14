@@ -226,7 +226,6 @@ const emit = defineEmits(["close"]);
 
 .resource-actions {
   display: flex;
-  flex-direction: column;
   gap: 16px;
 }
 
