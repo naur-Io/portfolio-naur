@@ -1,35 +1,32 @@
 <script setup>
 import { ref } from "vue";
 
-import soundcloudimage from "../../assets/social.png";
+import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
 </script>
 
 <template>
   <div class="card social-icons card-social">
     <div class="social-grid-inner">
-      <!--Behance-->
+      <!--Github-->
+      <a href="https://github.com/naur-Io" target="_blank" class="social-item">
+        <img
+          class="soundclound-img"
+          src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png"
+          alt=""
+        />
+      </a>
+
+        <!--Behance-->
       <a
         href="https://www.behance.net/rickelmeramos"
         target="_blank"
         class="social-item"
       >
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M8 20h4a3 3 0 0 0 0-6H8zm0-6h3a3 3 0 0 0 0-6H8z"></path>
-          <line x1="8" y1="14" x2="8" y2="20"></line>
-          <line x1="8" y1="8" x2="8" y2="14"></line>
-          <path d="M17 11a3 3 0 0 1 3 3v3h-6v-3a3 3 0 0 1 3-3z"></path>
-          <path d="M20 14h-6"></path>
-          <line x1="14" y1="8" x2="20" y2="8"></line>
-        </svg>
+        <img
+          class="soundclound-img"
+          src="https://cdn-icons-png.flaticon.com/512/2168/2168249.png"
+          alt=""
+        />
       </a>
 
       <!--Soundcloud-->
@@ -38,33 +35,7 @@ import soundcloudimage from "../../assets/social.png";
         class="social-item"
         target="_blank"
       >
-        <img
-          class="soundclound-img"
-          src="https://freepngimg.com/download/icon/search/8858-soundcloud-white.png"
-          alt=""
-        />
-      </a>
-
-      <!--Instagram-->
-      <a
-        href="https://www.instagram.com/por.naur/"
-        target="_blank"
-        class="social-item"
-      >
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
+        <img class="soundclound-img" :src="soundcloudimage" alt="" />
       </a>
 
       <!--LinkedIn-->
@@ -130,8 +101,9 @@ import soundcloudimage from "../../assets/social.png";
 
 <style scoped>
 .soundclound-img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  filter: invert(1);
 }
 
 .social-icons {

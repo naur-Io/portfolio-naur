@@ -22,6 +22,10 @@ const copyEmail = async () => {
   }
 };
 
+const contactMe = () => {
+  window.location.href = "mailto:[ruanrickelmeramos@gmail.com]";
+};
+
 const currentSkill = ref(0);
 const currentAboutImage = ref(0);
 
@@ -45,6 +49,41 @@ const prevAboutImage = () => {
   currentAboutImage.value =
     (currentAboutImage.value - 1 + props.data.gallery.length) %
     props.data.gallery.length;
+};
+
+// Touch handling for skills carousel
+const touchStartX = ref(0);
+const touchEndX = ref(0);
+
+const handleTouchStart = (e) => {
+  touchStartX.value = e.touches[0].clientX;
+};
+
+const handleTouchMove = (e) => {
+  touchEndX.value = e.touches[0].clientX;
+};
+
+const handleTouchEnd = () => {
+  if (!props.data?.skills) return;
+
+  const minSwipeDistance = 50;
+  const swipeDistance = touchEndX.value - touchStartX.value;
+
+  if (Math.abs(swipeDistance) > minSwipeDistance) {
+    if (swipeDistance > 0) {
+      // Swipe right - previous skill
+      currentSkill.value =
+        (currentSkill.value - 1 + props.data.skills.length) %
+        props.data.skills.length;
+    } else {
+      // Swipe left - next skill
+      currentSkill.value = (currentSkill.value + 1) % props.data.skills.length;
+    }
+  }
+
+  // Reset values
+  touchStartX.value = 0;
+  touchEndX.value = 0;
 };
 </script>
 
@@ -90,7 +129,12 @@ const prevAboutImage = () => {
         <div class="about-card skills-card">
           <div class="about-label">WHAT I DO BEST</div>
 
-          <div class="skills-carousel-content">
+          <div
+            class="skills-carousel-content"
+            @touchstart="handleTouchStart"
+            @touchmove="handleTouchMove"
+            @touchend="handleTouchEnd"
+          >
             <h3 class="skill-title">
               {{ data.skills[currentSkill].title }}
             </h3>
@@ -154,25 +198,9 @@ const prevAboutImage = () => {
 
           <!-- Contact -->
           <div class="about-card contact-card">
-            <h3 class="contact-title">Have a project<br />in mind?</h3>
-            <button class="copy-email-btn" @click="copyEmail">
-              {{ contactMessage || "Copy email" }}
-              <svg
-                v-if="!contactMessage"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path
-                  d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
-                ></path>
-              </svg>
+            <h3 class="contact-title">Have a project in mind?</h3>
+            <button class="copy-email-btn" @click="contactMe">
+              <p>{{ contactMessage || "Contact Me" }}</p>
             </button>
           </div>
         </div>
@@ -229,7 +257,7 @@ const prevAboutImage = () => {
   color: #555;
   text-transform: uppercase;
   margin-bottom: 12px;
-  font-size: var(--font-size-body-micro);
+  font-size: var(--font-size-body-md);
   font-weight: var(--font-weight-bold);
 }
 .label-mt {
@@ -287,17 +315,23 @@ const prevAboutImage = () => {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.skills-carousel-content:active {
+  cursor: grabbing;
 }
 .skill-title {
   color: #fff;
   margin: 0 0 12px 0;
-  font-size: var(--font-size-title-xl);
+  font-size: var(--font-size-title-md);
 }
 .skill-desc {
   color: #999;
   line-height: 1.5;
   margin: 0;
-  font-size: var(--font-size-body-sm);
+  font-size: 18px;
 }
 .carousel-dots {
   display: flex;
@@ -319,7 +353,7 @@ const prevAboutImage = () => {
 
 /* Stack */
 .stack-card {
-  gap: 24px;
+  gap: 14px;
 }
 .stack-title {
   color: #fff;
@@ -344,8 +378,9 @@ const prevAboutImage = () => {
   border: 1px solid #2a2a2a;
 }
 .stack-icon-box img {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
   opacity: 0.8;
 }
 
@@ -415,17 +450,27 @@ const prevAboutImage = () => {
 .contact-title {
   color: #fff;
   line-height: 1.3;
-  margin: 0;
-  font-size: var(--font-size-title-xl);
+  font-size: var(--font-size-title-sm);
+  width: 100%;
 }
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: var(--font-size-title-sm);
+    text-align: center;
+  }
+}
+
 .copy-email-btn {
   background: #222;
   border: 1px solid #333;
   color: #aaa;
+  width: 100%;
   padding: 10px 16px;
   border-radius: 8px;
   cursor: pointer;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 8px;
   transition: all 0.2s;

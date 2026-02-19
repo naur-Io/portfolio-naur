@@ -1,63 +1,97 @@
+import me2 from "../assets/me-assets/me2.jpeg";
+import me3 from "../assets/me-assets/me3.jpeg";
+
 export const projectsData = {
   about: {
     id: "about",
     type: "about-me",
     title: "About Me",
-    subtitle: "Software Developer",
+    subtitle: "Software Engineer & Visual Creative",
     story:
-      "I was born and raised in Cairo, Egypt. Ever since I was a child, I have had a passion for art and design. I was captivated by the vibrant colors and intricate details of the things around me, which inspired me to learn web design, where I delved deeper into the world of UX and product design.",
+      "I am a Brazilian software engineer who combines technical precision with artistic sensibility. Beyond building scalable web and mobile applications, I have a strong passion for visual composition, design, and photography. I see software not only as functional systems, but as crafted experiences where structure, clarity, and aesthetics work together.",
     current:
-      "Today I'm a Design Lead at mano improving the daily process of ordering groceries.",
+      "Currently, I develop full-stack solutions while continuously exploring visual design and photography as complementary disciplines that refine my understanding of product experience.",
     experience: [
-      { role: "Design Lead", company: "Mano", date: "Current" },
-      { role: "Senior Designer", company: "Shopify", date: "2021 – 2022" },
-      { role: "Product Designer", company: "OLX", date: "2020 – 2021" },
-      { role: "UX/UI Designer", company: "Shrink", date: "2019 – 2020" },
+      {
+        role: "QA Engineer",
+        company: "CIn - UFPE",
+        date: "Current",
+      },
+      {
+        role: "Software Engineer",
+        company: "Motorola",
+        date: "2026",
+      },
+      {
+        role: "Full-Stack Developer",
+        company: "Freelancer",
+        date: "2022 – 2026",
+      },
+      {
+        role: "Backend Developer",
+        company: "Softex Pernambuco",
+        date: "2023 – 2024",
+      },
+      {
+        role: "Frontend Developer",
+        company: "Softex Pernambuco",
+        date: "2022 - 2023",
+      },
+      {
+        role: "Designer & Photographer",
+        company: "Freelancer",
+        date: "2022 – 2026",
+      },
     ],
     skills: [
       {
-        title: "Digital Design",
-        desc: "Providing innovative problem-solving methods and impactful solutions to ensure a better experience.",
+        title: "Software Engineering",
+        desc: "I build scalable web and mobile applications with a strong focus on clean architecture, maintainable code, and long-term performance. I value clear abstractions, modular systems, and practical solutions. I also explore AI and machine learning as tools to create smarter and more efficient products.",
       },
       {
-        title: "Frontend Development",
-        desc: "Building responsive, accessible, and performant web applications using modern technologies.",
+        title: "Visual Design & Composition",
+        desc: "I see design as a balance between structure and creativity. I apply principles like hierarchy, contrast, and typography to create clear and intuitive interfaces, always considering responsiveness and user experience across devices.",
       },
       {
-        title: "Micro-Interactions",
-        desc: "Adding subtle animations and interactions to delight users.",
+        title: "Photography & Aesthetic Direction",
+        desc: "Photography is part of how I understand visual storytelling. I focus on light, framing, and atmosphere to build strong visual identities, and I’ve supported NGOs and eco-camping projects with imagery and digital presence.",
       },
     ],
     stack: [
       {
-        name: "Framer",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/8/87/Framer_logo.svg",
+        name: "React",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png",
+      },
+      {
+        name: "Node.js",
+        icon: "https://s3.eu-west-1.amazonaws.com/images.tutorialedge.net/images/node.png",
+      },
+      {
+        name: "Java",
+        icon: "https://education.oracle.com/file/general/p-80-java.png",
+      },
+      {
+        name: "TypeScript",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1280px-Typescript_logo_2020.svg.png",
+      },
+      {
+        name: "Docker",
+        icon: "https://cdn-icons-png.flaticon.com/512/919/919853.png",
+      },
+      {
+        name: "PostgreSQL",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1280px-Postgresql_elephant.svg.png",
       },
       {
         name: "Figma",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+        icon: "https://blog.greggant.com/images/posts/2019-04-25-figma/Figma.png",
       },
       {
-        name: "Notion",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
-      },
-      {
-        name: "React",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-      },
-      {
-        name: "Vue",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
-      },
-      {
-        name: "Node",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+        name: "Canva1",
+        icon: "https://cdn-1.webcatalog.io/catalog/canva-cn/canva-cn-icon.png?v=1766364645830",
       },
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1621252179027-94459d27d3ee?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1593642532400-2682810df593?q=80&w=1000&auto=format&fit=crop",
-    ],
+    gallery: [me2, me3],
   },
   mobile1: {
     id: "mobile1",
