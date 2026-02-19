@@ -28,62 +28,157 @@ const contactMe = () => {
 
 const currentSkill = ref(0);
 const currentAboutImage = ref(0);
+const skillTransition = ref(false);
+const imageTransition = ref(false);
 
 const nextSkill = () => {
   if (!props.data?.skills) return;
-  currentSkill.value = (currentSkill.value + 1) % props.data.skills.length;
+  skillTransition.value = true;
+  setTimeout(() => {
+    currentSkill.value = (currentSkill.value + 1) % props.data.skills.length;
+    setTimeout(() => {
+      skillTransition.value = false;
+    }, 50);
+  }, 150);
 };
 
 const setSkill = (i) => {
-  currentSkill.value = i;
+  if (i === currentSkill.value) return;
+  skillTransition.value = true;
+  setTimeout(() => {
+    currentSkill.value = i;
+    setTimeout(() => {
+      skillTransition.value = false;
+    }, 50);
+  }, 150);
 };
 
 const nextAboutImage = () => {
   if (!props.data?.gallery) return;
-  currentAboutImage.value =
-    (currentAboutImage.value + 1) % props.data.gallery.length;
+  imageTransition.value = true;
+  setTimeout(() => {
+    currentAboutImage.value =
+      (currentAboutImage.value + 1) % props.data.gallery.length;
+    setTimeout(() => {
+      imageTransition.value = false;
+    }, 50);
+  }, 150);
 };
 
 const prevAboutImage = () => {
   if (!props.data?.gallery) return;
-  currentAboutImage.value =
-    (currentAboutImage.value - 1 + props.data.gallery.length) %
-    props.data.gallery.length;
+  imageTransition.value = true;
+  setTimeout(() => {
+    currentAboutImage.value =
+      (currentAboutImage.value - 1 + props.data.gallery.length) %
+      props.data.gallery.length;
+    setTimeout(() => {
+      imageTransition.value = false;
+    }, 50);
+  }, 150);
 };
 
 // Touch handling for skills carousel
 const touchStartX = ref(0);
 const touchEndX = ref(0);
+const touchStartY = ref(0);
+const touchEndY = ref(0);
 
-const handleTouchStart = (e) => {
+const handleSkillTouchStart = (e) => {
   touchStartX.value = e.touches[0].clientX;
+  touchStartY.value = e.touches[0].clientY;
 };
 
-const handleTouchMove = (e) => {
+const handleSkillTouchMove = (e) => {
   touchEndX.value = e.touches[0].clientX;
+  touchEndY.value = e.touches[0].clientY;
 };
 
-const handleTouchEnd = () => {
+const handleSkillTouchEnd = () => {
   if (!props.data?.skills) return;
 
   const minSwipeDistance = 50;
-  const swipeDistance = touchEndX.value - touchStartX.value;
+  const swipeDistanceX = touchEndX.value - touchStartX.value;
+  const swipeDistanceY = touchEndY.value - touchStartY.value;
 
-  if (Math.abs(swipeDistance) > minSwipeDistance) {
-    if (swipeDistance > 0) {
-      // Swipe right - previous skill
-      currentSkill.value =
-        (currentSkill.value - 1 + props.data.skills.length) %
-        props.data.skills.length;
-    } else {
-      // Swipe left - next skill
-      currentSkill.value = (currentSkill.value + 1) % props.data.skills.length;
-    }
+  // Check if horizontal swipe is more significant than vertical
+  if (Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY) && Math.abs(swipeDistanceX) > minSwipeDistance) {
+    skillTransition.value = true;
+    
+    setTimeout(() => {
+      if (swipeDistanceX > 0) {
+        // Swipe right - previous skill
+        currentSkill.value =
+          (currentSkill.value - 1 + props.data.skills.length) %
+          props.data.skills.length;
+      } else {
+        // Swipe left - next skill
+        currentSkill.value = (currentSkill.value + 1) % props.data.skills.length;
+      }
+      
+      setTimeout(() => {
+        skillTransition.value = false;
+      }, 50);
+    }, 150);
   }
 
   // Reset values
   touchStartX.value = 0;
   touchEndX.value = 0;
+  touchStartY.value = 0;
+  touchEndY.value = 0;
+};
+
+// Touch handling for image carousel
+const imageTouchStartX = ref(0);
+const imageTouchEndX = ref(0);
+const imageTouchStartY = ref(0);
+const imageTouchEndY = ref(0);
+
+const handleImageTouchStart = (e) => {
+  imageTouchStartX.value = e.touches[0].clientX;
+  imageTouchStartY.value = e.touches[0].clientY;
+};
+
+const handleImageTouchMove = (e) => {
+  imageTouchEndX.value = e.touches[0].clientX;
+  imageTouchEndY.value = e.touches[0].clientY;
+};
+
+const handleImageTouchEnd = () => {
+  if (!props.data?.gallery) return;
+
+  const minSwipeDistance = 50;
+  const swipeDistanceX = imageTouchEndX.value - imageTouchStartX.value;
+  const swipeDistanceY = imageTouchEndY.value - imageTouchStartY.value;
+
+  // Check if horizontal swipe is more significant than vertical
+  if (Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY) && Math.abs(swipeDistanceX) > minSwipeDistance) {
+    imageTransition.value = true;
+    
+    setTimeout(() => {
+      if (swipeDistanceX > 0) {
+        // Swipe right - previous image
+        currentAboutImage.value =
+          (currentAboutImage.value - 1 + props.data.gallery.length) %
+          props.data.gallery.length;
+      } else {
+        // Swipe left - next image
+        currentAboutImage.value =
+          (currentAboutImage.value + 1) % props.data.gallery.length;
+      }
+      
+      setTimeout(() => {
+        imageTransition.value = false;
+      }, 50);
+    }, 150);
+  }
+
+  // Reset values
+  imageTouchStartX.value = 0;
+  imageTouchEndX.value = 0;
+  imageTouchStartY.value = 0;
+  imageTouchEndY.value = 0;
 };
 </script>
 
@@ -131,16 +226,18 @@ const handleTouchEnd = () => {
 
           <div
             class="skills-carousel-content"
-            @touchstart="handleTouchStart"
-            @touchmove="handleTouchMove"
-            @touchend="handleTouchEnd"
+            @touchstart="handleSkillTouchStart"
+            @touchmove="handleSkillTouchMove"
+            @touchend="handleSkillTouchEnd"
           >
-            <h3 class="skill-title">
-              {{ data.skills[currentSkill].title }}
-            </h3>
-            <p class="skill-desc">
-              {{ data.skills[currentSkill].desc }}
-            </p>
+            <div class="carousel-slide" :class="{ 'slide-transition': skillTransition }">
+              <h3 class="skill-title">
+                {{ data.skills[currentSkill].title }}
+              </h3>
+              <p class="skill-desc">
+                {{ data.skills[currentSkill].desc }}
+              </p>
+            </div>
           </div>
 
           <div class="carousel-dots">
@@ -171,12 +268,19 @@ const handleTouchEnd = () => {
         <!-- Bottom Split -->
         <div class="about-bottom-split">
           <!-- Image Slider -->
-          <div class="about-card image-carousel-card">
-            <img
-              :src="data.gallery[currentAboutImage]"
-              alt="Me"
-              class="about-image-cover"
-            />
+          <div 
+            class="about-card image-carousel-card"
+            @touchstart="handleImageTouchStart"
+            @touchmove="handleImageTouchMove"
+            @touchend="handleImageTouchEnd"
+          >
+            <div class="image-slide" :class="{ 'image-transition': imageTransition }">
+              <img
+                :src="data.gallery[currentAboutImage]"
+                alt="Me"
+                class="about-image-cover"
+              />
+            </div>
 
             <div class="image-nav-overlay">
               <button class="nav-btn prev" @click.stop="prevAboutImage">
@@ -318,9 +422,19 @@ const handleTouchEnd = () => {
   cursor: grab;
   user-select: none;
   -webkit-user-select: none;
+  overflow: hidden;
 }
 .skills-carousel-content:active {
   cursor: grabbing;
+}
+.carousel-slide {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.carousel-slide.slide-transition {
+  opacity: 0;
+  transform: translateX(-10px);
 }
 .skill-title {
   color: #fff;
@@ -399,6 +513,23 @@ const handleTouchEnd = () => {
   position: relative;
   min-height: 200px;
   aspect-ratio: 1/1;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.image-carousel-card:active {
+  cursor: grabbing;
+}
+.image-slide {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.image-slide.image-transition {
+  opacity: 0;
+  transform: scale(0.95);
 }
 .about-image-cover {
   width: 100%;
@@ -417,6 +548,7 @@ const handleTouchEnd = () => {
   backdrop-filter: blur(4px);
   padding: 6px 12px;
   border-radius: 20px;
+  pointer-events: auto;
 }
 .nav-btn {
   background: none;
@@ -426,6 +558,7 @@ const handleTouchEnd = () => {
   cursor: pointer;
   line-height: 1;
   padding: 0 4px;
+  pointer-events: auto;
 }
 .image-dots {
   display: flex;
