@@ -1,5 +1,9 @@
+//Me Photos
 import me2 from "../assets/me-assets/me2.jpeg";
 import me3 from "../assets/me-assets/me3.jpeg";
+
+//Visual Gallery Photos
+import maryinolinda from "../assets/visualGallery-assets/v1.png"
 
 export const projectsData = {
   about: {
@@ -159,30 +163,15 @@ export const projectsData = {
     title: "Visual Portfolio",
     subtitle: "Photography & Audiovisual Direction",
     scrollText: [
-      "I'm Tamer, a multi-disciplinary creator specializing in capturing immersive and engaging visual experiences.",
-      "My work is characterized by a commitment to clarity, emotion, and attention to detail, ensuring that every frame resonates authentically with its audience.",
-      "I have a deep appreciation for lighting and composition. Driven by the desire to innovate and push creative boundaries in the audiovisual industry.",
+      "I'm Naur, a systems developer and audiovisual producer with practical experience in modern web and mobile applications.",
+      "I primarily work with technologies from the Typescript ecosystem and structured backends, prioritizing well-defined architecture, performance, and user experience as central pillars of each project.",
+      "In audiovisual production, I apply technical fundamentals of composition and visual storytelling to build with a clear identity and communicative intent. My unique approach lies in integrating aesthetics, storytelling, and visual direction within the same creative process.",
     ],
     gallery: [
       {
         id: 1,
-        src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1000&auto=format&fit=crop",
-        behanceUrl: "#project1",
-      },
-      {
-        id: 2,
-        src: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1000&auto=format&fit=crop",
-        behanceUrl: "#project2",
-      },
-      {
-        id: 3,
-        src: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1000&auto=format&fit=crop",
-        behanceUrl: "#project3",
-      },
-      {
-        id: 4,
-        src: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1000&auto=format&fit=crop",
-        behanceUrl: "#project4",
+        src: maryinolinda,
+        behanceUrl: "https://www.behance.net/gallery/244600657/Mary-in-Olinda",
       },
     ],
     thumb:

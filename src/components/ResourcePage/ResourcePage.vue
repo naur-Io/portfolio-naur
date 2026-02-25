@@ -47,7 +47,7 @@ const emit = defineEmits(["close"]);
                     class="check-app-btn"
                     target="_blank"
                   >
-                    Get it for free <span>↗</span>
+                    See in Github <span>↗</span>
                   </a>
                   <a
                     :href="resource.previewUrl"

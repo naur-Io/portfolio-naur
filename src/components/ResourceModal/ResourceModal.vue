@@ -46,6 +46,7 @@ const emit = defineEmits(["close", "open-resource"]);
               </div>
               <div class="blog-content">
                 <span class="blog-price">{{ resource.price }}</span>
+                <span class="blog-price">{{ resource.area }}</span>
                 <h3>{{ resource.title }}</h3>
                 <p>{{ resource.subtitle }}</p>
                 <a

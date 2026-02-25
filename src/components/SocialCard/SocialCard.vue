@@ -44,22 +44,7 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
         target="_blank"
         class="social-item"
       >
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path
-            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-          ></path>
-          <rect x="2" y="9" width="4" height="12"></rect>
-          <circle cx="4" cy="4" r="2"></circle>
-        </svg>
+       <img class="soundclound-img" src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="Linkedin-icon">
       </a>
 
       <!--Youtube-->
@@ -69,8 +54,8 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
         class="social-item"
       >
         <img
-          class="youtube-img"
-          src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png"
+          class="soundclound-img"
+          src="https://cdn-icons-png.flaticon.com/512/152/152810.png"
           alt=""
         />
       </a>

@@ -154,7 +154,7 @@ const closeLightbox = () => {
       <div class="main-col flex-[1.7]">
         <div class="row-flex flex-[0.6]">
           <ProjectCard
-            title="Cashless"
+            title="LAY"
             :bgImage="projectGif"
             customClass="card project-mobile interactive-card card-cashless"
             @click="openModal('mobile1')"
@@ -444,7 +444,7 @@ const closeLightbox = () => {
     height: 250px;
   }
   .card-cashless {
-    order: 6;
+    order: 7;
     min-height: 180px;
   }
   .card-blogs {
@@ -455,7 +455,7 @@ const closeLightbox = () => {
     order: 4;
   }
   .card-resources {
-    order: 7;
+    order: 5;
   }
 
   .stack-toggle-container {

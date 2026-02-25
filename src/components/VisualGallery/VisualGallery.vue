@@ -139,7 +139,6 @@ onUnmounted(() => {
 
 .visual-item {
   position: relative;
-  aspect-ratio: 4/3;
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;

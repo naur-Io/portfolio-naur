@@ -1,20 +1,77 @@
 <script setup>
-defineProps({
-  posts: Array,
+import { ref, onMounted } from "vue";
+
+const posts = ref([]);
+const loading = ref(true);
+const error = ref(false);
+
+const username = "naur_io";
+
+function normalizePosts(data) {
+  if (!data) return [];
+  return Array.isArray(data) ? data : [data];
+}
+
+onMounted(async () => {
+  try {
+    const url = `https://dev.to/api/articles?username=${username}&_=${Date.now()}`;
+    const res = await fetch(url, { cache: "no-store" });
+
+    if (!res.ok) {
+      throw new Error(`API error: ${res.status}`);
+    }
+
+    const data = await res.json();
+
+    posts.value = normalizePosts(data)
+      .filter(post => post.user?.username === username)
+      .filter(post => post.id !== 2987761)
+      .map(post => ({
+        id: post.id,
+        title: post.title,
+        desc: post.description,
+        date: new Date(post.published_at).toLocaleDateString("pt-BR"),
+        image: post.cover_image || post.social_image,
+        url: post.url,
+      }));
+  } catch (err) {
+    console.error("Erro ao buscar artigos:", err);
+    error.value = true;
+    posts.value = [];
+  } finally {
+    loading.value = false;
+  }
 });
 </script>
 
 <template>
-  <div class="blog-grid-container">
+  <div v-if="loading">
+    Carregando artigos...
+  </div>
+
+  <div v-else-if="error">
+    Erro ao carregar os artigos.
+  </div>
+
+  <div v-else class="blog-grid-container">
     <div class="blog-card" v-for="post in posts" :key="post.id">
       <div class="blog-thumb">
         <img :src="post.image" :alt="post.title" />
       </div>
+
       <div class="blog-content">
         <span class="blog-date">{{ post.date }}</span>
         <h3>{{ post.title }}</h3>
         <p>{{ post.desc }}</p>
-        <a href="#" class="read-more">Read article <span>→</span></a>
+
+        <a
+          :href="post.url"
+          target="_blank"
+          rel="noopener"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
       </div>
     </div>
   </div>
@@ -35,9 +92,7 @@ defineProps({
   border: 1px solid #222;
   border-radius: 20px;
   overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
 }
@@ -105,6 +160,13 @@ defineProps({
   transition: gap 0.2s ease;
   font-size: var(--font-size-body-xs);
   font-weight: var(--font-weight-semibold);
+  border: 1px solid #333;
+  padding: 6px 12px;
+  border-radius: 7px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .read-more:hover {
