@@ -315,8 +315,20 @@ const handleImageTouchEnd = () => {
 
 <style scoped>
 .about-me-container {
-  width: 100%;
+  width: 75%;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .about-me-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me-container {
+    width: 100%;
+  }
 }
 
 .about-grid {

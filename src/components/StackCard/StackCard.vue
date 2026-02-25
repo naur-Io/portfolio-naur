@@ -23,19 +23,6 @@ const bentoInfiniteTech = [...bentoStackTech, ...bentoStackTech];
           </div>
         </div>
       </div>
-
-      <!-- Segunda cópia para loop infinito (duplicado para transição perfeita) -->
-      <div class="stack-carousel-track stack-carousel-duplicate">
-        <div
-          v-for="(tech, index) in bentoInfiniteTech"
-          :key="`bento-tech-duplicate-${index}`"
-          class="tech-item"
-        >
-          <div class="tech-icon">
-            <img :src="tech.icon" :alt="tech.name" />
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -48,10 +35,12 @@ const bentoInfiniteTech = [...bentoStackTech, ...bentoStackTech];
   flex-direction: column;
   position: relative;
   z-index: 2;
+  padding: 12px;
+  justify-content: center;
 }
 
 .stack-header {
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 
 .stack-title {
@@ -69,6 +58,20 @@ const bentoInfiniteTech = [...bentoStackTech, ...bentoStackTech];
   overflow: hidden;
   position: relative;
   border-radius: 16px;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
 
 /* Track do Carrossel (animação) */
@@ -76,11 +79,13 @@ const bentoInfiniteTech = [...bentoStackTech, ...bentoStackTech];
   display: flex;
   position: absolute;
   top: 12px;
-  left: 12px;
-  right: 12px;
-  animation: scrollTechHorizontal 5s linear infinite;
+  left: 0;
+  gap: 20px;
+  animation: scrollTechHorizontal 20s linear infinite;
   animation-play-state: running;
   flex-direction: row;
+  width: max-content;
+  will-change: transform;
 }
 
 /* Animação horizontal */
@@ -93,22 +98,17 @@ const bentoInfiniteTech = [...bentoStackTech, ...bentoStackTech];
   }
 }
 
-.stack-carousel-duplicate {
-  left: calc(100% + 20px);
-  top: 12px;
-  animation-delay: -15s;
-}
-
 /* Itens de Tecnologia */
 .tech-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 5px;
   border-radius: 12px;
   min-width: 100px;
   min-height: 100px;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .tech-item:hover {
@@ -118,8 +118,8 @@ const bentoInfiniteTech = [...bentoStackTech, ...bentoStackTech];
 }
 
 .tech-icon {
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,21 +144,36 @@ const bentoInfiniteTech = [...bentoStackTech, ...bentoStackTech];
   .stack-title {
     font-size: var(--font-size-title-sm);
   }
+
+  .stack-carousel-track {
+    animation-duration: 15s;
+  }
 }
 
 @media (max-width: 768px) {
+
+  .stack-title{
+    text-align: center;
+  }
+
   .stack-content {
-    gap: 15px;
+    gap: 1px;
+    padding: 0px;
   }
   .stack-carousel-container {
-    height: 140px;
+    height: 100px;
   }
   .tech-item {
-    min-width: 120px;
-    padding: 5px 8px;
+    padding: 0;
+    min-width: 80px;
+    min-height: 80px;
   }
   .stack-title {
     font-size: var(--font-size-title-xs);
+  }
+
+  .stack-carousel-track {
+    animation-duration: 12s; /* Mais rápido no mobile */
   }
 }
 </style>

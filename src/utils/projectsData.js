@@ -3,7 +3,7 @@ import me2 from "../assets/me-assets/me2.jpeg";
 import me3 from "../assets/me-assets/me3.jpeg";
 
 //Visual Gallery Photos
-import maryinolinda from "../assets/visualGallery-assets/v1.png"
+import maryinolinda from "../assets/visualGallery-assets/v1.png";
 
 export const projectsData = {
   about: {
@@ -12,7 +12,7 @@ export const projectsData = {
     title: "About Me",
     subtitle: "Software Engineer & Visual Creative",
     story:
-      "I am a Brazilian software engineer who combines technical precision with artistic sensibility. Beyond building scalable web and mobile applications, I have a strong passion for visual composition, design, and photography. I see software not only as functional systems, but as crafted experiences where structure, clarity, and aesthetics work together.",
+      "I am a Brazilian software engineer who combines technical precision with artistic sensibility. Isee software not only as functional systems, but as crafted experiences where structure, clarity, and aesthetics work together.",
     current:
       "Currently, I develop full-stack solutions while continuously exploring visual design and photography as complementary disciplines that refine my understanding of product experience.",
     experience: [
@@ -83,6 +83,10 @@ export const projectsData = {
         icon: "https://cdn-icons-png.flaticon.com/512/919/919853.png",
       },
       {
+        name: "Git",
+        icon: "https://img.icons8.com/color/512/git.png",
+      },
+      {
         name: "PostgreSQL",
         icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1280px-Postgresql_elephant.svg.png",
       },
@@ -91,7 +95,7 @@ export const projectsData = {
         icon: "https://blog.greggant.com/images/posts/2019-04-25-figma/Figma.png",
       },
       {
-        name: "Canva1",
+        name: "Canva",
         icon: "https://cdn-1.webcatalog.io/catalog/canva-cn/canva-cn-icon.png?v=1766364645830",
       },
     ],

@@ -158,12 +158,15 @@ const emit = defineEmits(["close", "open-resource"]);
 }
 
 .blog-grid-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* ← 4 COLUNAS FIXAS */
   gap: 24px;
   padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .blog-card {
@@ -177,6 +180,7 @@ const emit = defineEmits(["close", "open-resource"]);
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  width: 450px;
 }
 
 .blog-card:hover {
