@@ -4,6 +4,7 @@ import me3 from "../assets/me-assets/me3.jpeg";
 
 //Visual Gallery Photos
 import maryinolinda from "../assets/visualGallery-assets/v1.png";
+import valleyofthemoon from "../assets/visualGallery-assets/v2.jpg"
 
 export const projectsData = {
   about: {
@@ -176,6 +177,11 @@ export const projectsData = {
         id: 1,
         src: maryinolinda,
         behanceUrl: "https://www.behance.net/gallery/244600657/Mary-in-Olinda",
+      },
+       {
+        id: 2,
+        src: valleyofthemoon,
+        behanceUrl: "https://www.behance.net/gallery/245155443/Valley-of-the-Moon",
       },
     ],
     thumb:
