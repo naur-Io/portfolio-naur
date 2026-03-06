@@ -8,7 +8,7 @@ const bentoInfiniteTech = [...bentoStackTech, ...bentoStackTech];
 <template>
   <div class="stack-content">
     <div class="stack-header">
-      <h3 class="stack-title">Tech Stack</h3>
+      <h3 class="stack-title">Stack de Trabalho</h3>
     </div>
     <div class="stack-carousel-container">
       <div class="stack-carousel-track">

@@ -1,5 +1,5 @@
 //import images
-import carolPrintShopImg from "../assets/projects-assets/carol-print.gif"
+import carolPrintShopImg from "../assets/projects-assets/carol-print.gif";
 import carolSportsImg from "../assets/projects-assets/carol-sports.gif";
 import pinhoPort from "../assets/projects-assets/pinho-port.gif";
 import wpbot from "../assets/projects-assets/wp-bot.png";
@@ -7,17 +7,13 @@ import wpbot from "../assets/projects-assets/wp-bot.png";
 export const resourcesData = [
   {
     id: 1,
-    title: "Carol Print Shop - Website Profissional",
+    title: "Carol Print Shop - Website",
     subtitle: "HTML/CSS/JS",
     price: "Freelance Project",
     area: "Frontend",
     description:
-      "Development of a professional portfolio website for Carol Print Shop. Built with HTML, CSS, JavaScript and a RESTful API to dynamically fetch and display content. Simple, modern, and functional website focused on presenting services and products.",
-    features: [
-      "Responsive Layout",
-      "Clean UI focused on clarity",
-      "Dynamic content loading via REST API",
-    ],
+      "Desenvolvimento de um website de portfólio profissional para a Carol Print Shop. Construído com HTML, CSS, JavaScript e uma API RESTful para buscar e exibir conteúdo dinamicamente. Um website simples, moderno e funcional, focado na apresentação de serviços e produtos.",
+    features: ["Layout Reponsivo", "Carregamento Dinâmico via REST API"],
     previewUrl: "https://carolgrafica.com.br/",
     getUrl: "https://github.com/naur-Io/CarolCopiadoraKM",
     image: carolPrintShopImg,
@@ -30,11 +26,11 @@ export const resourcesData = [
     price: "Freelance Project",
     area: "Frontend",
     description:
-      "Sales website for Carol Esportes, a local sports products store. Designed to showcase and sell high-quality sports items with smooth user experience and responsive layout.",
+      "Site de vendas da Carol Esportes, uma loja local de artigos esportivos. Projetado para exibir e vender itens esportivos de alta qualidade com uma experiência de usuário fluida e um layout responsivo.",
     features: [
-      "Product catalog with categories",
-      "Fully responsive design",
-      "Fast loading and smooth browsing",
+      "Catálogo de produtos por categoria",
+      "Design totalmente responsivo",
+      "Carregamento rápido e navegação suave",
     ],
     previewUrl: "https://carol-sports-km.vercel.app/",
     getUrl: "https://github.com/SrLuc/CarolSportsKM",
@@ -48,12 +44,12 @@ export const resourcesData = [
     price: "Freelance Project",
     area: "Frontend",
     description:
-      "Modern portfolio website for Mateus Pinho, a personal trainer. Built with Vue.js and TypeScript, following a clean Linktree-inspired design. Highlights background, certifications, training plans, and coaching services.",
+      "Portfólio online moderno para Mateus Pinho, personal trainer. Desenvolvido com Vue.js e TypeScript, seguindo um design limpo inspirado no Linktree. Destaca sua formação, certificações, planos de treinamento e serviços de coaching. O site é totalmente responsivo, garantindo uma experiência fluida em dispositivos móveis e desktops.",
     features: [
-      "Vue.js Component Architecture",
-      "TypeScript for type safety",
-      "Linktree-inspired minimalist layout",
-      "Mobile-first responsive design",
+      "Arquitetura de Componentes em Vue.js",
+      "TypeScript para segurança de tipos",
+      "Layout minimalista inspirado no Linktree",
+      "Design responsivo com foco em dispositivos móveis",
     ],
     previewUrl: "https://pinho-port.vercel.app/",
     getUrl: "https://github.com/SrLuc/PinhoPort",
@@ -64,15 +60,15 @@ export const resourcesData = [
     id: 4,
     title: "WhatsApp Finance Bot",
     subtitle: "Node.js + WhatsApp API",
-    price: "Personal Project",
+    price: "Projeto Pessoal",
     area: "Backend",
     description:
-      "Personal WhatsApp finance bot for quick daily financial tracking. Register income, expenses, and financial notes directly through WhatsApp. Generates monthly and yearly reports covering all accounts, expenses, and income.",
+      "Bot de finanças pessoais para WhatsApp para um acompanhamento rápido das suas finanças diárias. Registre receitas, despesas e anotações financeiras diretamente pelo WhatsApp. Gera relatórios mensais e anuais abrangendo todas as contas, despesas e receitas.",
     features: [
-      "Register income/expenses via WhatsApp",
-      "Monthly & yearly financial reports",
-      "Simple command interface",
-      "Can run on personal SIM card",
+      "Registrar receitas/despesas via WhatsApp",
+      "Relatórios financeiros mensais e anuais",
+      "Interface de comando simples",
+      "Pode ser executado em um cartão SIM pessoal",
     ],
     previewUrl: "https://github.com/naur-Io/WhatsApp-Finance-Bot",
     getUrl: "https://github.com/naur-Io/WhatsApp-Finance-Bot",

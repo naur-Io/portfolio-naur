@@ -16,7 +16,7 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
         />
       </a>
 
-        <!--Behance-->
+      <!--Behance-->
       <a
         href="https://www.behance.net/rickelmeramos"
         target="_blank"
@@ -44,7 +44,11 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
         target="_blank"
         class="social-item"
       >
-       <img class="soundclound-img" src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="Linkedin-icon">
+        <img
+          class="soundclound-img"
+          src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png"
+          alt="Linkedin-icon"
+        />
       </a>
 
       <!--Youtube-->
@@ -62,23 +66,15 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
 
       <!--Mail-->
       <a
-        href="mailto:[ruanrickelmeramos@gmail.com]"
+        href="https://www.worldpackers.com/users/5593360"
         target="_blank"
         class="social-item"
       >
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-          <path d="M22 6l-10 7L2 6"></path>
-        </svg>
+        <img
+          class="worldpackers-img"
+          src="https://framerusercontent.com/images/h0dqZHVhCuoYtnshSHCCiUOTLs.png"
+          alt=""
+        />
       </a>
     </div>
   </div>
@@ -89,6 +85,10 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
   width: 50px;
   height: 50px;
   filter: invert(1);
+}
+
+.worldpackers-img{
+   filter: invert(1);
 }
 
 .social-icons {

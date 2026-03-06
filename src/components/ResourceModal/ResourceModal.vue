@@ -30,8 +30,8 @@ const emit = defineEmits(["close", "open-resource"]);
 
         <div class="modal-scroll-content">
           <div class="modal-header">
-            <h2>RESOURCES</h2>
-            <span>Resources to speed your workflow</span>
+            <h2>Projetos</h2>
+            <span>Sites & Sistemas Desenvolvidos Recentemente</span>
           </div>
 
           <div class="blog-grid-container">
@@ -54,7 +54,7 @@ const emit = defineEmits(["close", "open-resource"]);
                   class="read-more"
                   @click.prevent="emit('open-resource', resource)"
                 >
-                  View details <span>→</span>
+                  Saiba Mais <span>→</span>
                 </a>
               </div>
             </div>
@@ -249,6 +249,11 @@ const emit = defineEmits(["close", "open-resource"]);
   transition: gap 0.2s ease;
   font-size: var(--font-size-body-xs);
   font-weight: var(--font-weight-semibold);
+  padding: 10px;
+  border-radius: 32px;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #333;
 }
 
 .read-more:hover {

@@ -24,7 +24,7 @@
     </div>
 
     <p class="intro-description">
-      Software engineer with a passion for Photography & Visual Storytelling
+      Engenheiro de software movido por tecnologia, fotografia e narrativa visual
     </p>
   </div>
 </template>

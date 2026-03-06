@@ -189,18 +189,18 @@ const handleImageTouchEnd = () => {
       <div class="about-column-left">
         <!-- Story Card -->
         <div class="about-card story-card">
-          <h2 class="about-title">What I'm about?</h2>
+          <h2 class="about-title">Um pouco do que me move</h2>
 
-          <div class="about-label">MY STORY</div>
+          <div class="about-label">SOBRE MIM</div>
           <p class="story-text">{{ data.story }}</p>
 
-          <div class="about-label label-mt">WHAT I DO NOW</div>
+          <div class="about-label label-mt">O QUE FAÇO AGORA</div>
           <p class="story-text">{{ data.current }}</p>
         </div>
 
         <!-- Experience Card -->
         <div class="about-card experience-card">
-          <div class="about-label">EXPERIENCE</div>
+          <div class="about-label">EXPERIÊNCIA</div>
 
           <ul class="experience-list">
             <li
@@ -222,7 +222,7 @@ const handleImageTouchEnd = () => {
       <div class="about-column-right">
         <!-- What I Do Best -->
         <div class="about-card skills-card">
-          <div class="about-label">WHAT I DO BEST</div>
+          <div class="about-label">O QUE FAÇO DE MELHOR</div>
 
           <div
             class="skills-carousel-content"
@@ -302,7 +302,7 @@ const handleImageTouchEnd = () => {
 
           <!-- Contact -->
           <div class="about-card contact-card">
-            <h3 class="contact-title">Have a project in mind?</h3>
+            <h3 class="contact-title">Tem algum projeto em mente?</h3>
             <button class="copy-email-btn" @click="contactMe">
               <p>{{ contactMessage || "Contact Me" }}</p>
             </button>

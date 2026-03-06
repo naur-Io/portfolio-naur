@@ -55,7 +55,7 @@ onUnmounted(() => {
     </div>
 
     <div class="gallery-section-title">
-      <h3>Selected Works</h3>
+      <h3>Obras em evidência</h3>
       <div class="divider"></div>
     </div>
 
@@ -102,7 +102,8 @@ onUnmounted(() => {
 
 /* Override size for this specific section based on original */
 .scroll-text-section .reveal-text {
-  font-size: 30px;
+  font-size: 40px;
+  
 }
 
 .reveal-text.in-view {
@@ -135,6 +136,7 @@ onUnmounted(() => {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  direction: rtl;
 }
 
 .visual-item {
