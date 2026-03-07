@@ -47,7 +47,7 @@ const emit = defineEmits(["close"]);
                     class="check-app-btn"
                     target="_blank"
                   >
-                    Acesse o Código no Github <span>↗</span>
+                    Acesse no Github <span>↗</span>
                   </a>
                   <a
                     :href="resource.previewUrl"
@@ -310,6 +310,23 @@ const emit = defineEmits(["close"]);
   font-weight: var(--font-weight-semibold);
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .github-btn {
+    padding: 12px 20px;
+    font-size: 12px;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .check-app-btn {
+    padding: 12px 20px;
+    font-size: 12px;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
 .github-btn:hover {
   background: #333;
   border-color: #555;
