@@ -103,7 +103,6 @@ onUnmounted(() => {
 /* Override size for this specific section based on original */
 .scroll-text-section .reveal-text {
   font-size: 40px;
-  
 }
 
 .reveal-text.in-view {
@@ -132,11 +131,20 @@ onUnmounted(() => {
   width: 100%;
 }
 
+/*
 .visual-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  direction: rtl;
+  direction: ltr;
+}
+*/
+
+.visual-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: column-reverse;
 }
 
 .visual-item {

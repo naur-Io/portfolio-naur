@@ -387,7 +387,7 @@ const closeLightbox = () => {
   pointer-events: none;
   z-index: 99999;
   background-repeat: repeat;
-  animation: noise-animation 0.2s infinite;
+  animation: noise-animation 0.1s infinite;
 }
 
 /* RESPONSIVE LAYOUT */
