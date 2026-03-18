@@ -30,8 +30,8 @@ const emit = defineEmits(["close", "open-resource"]);
 
         <div class="modal-scroll-content">
           <div class="modal-header">
-            <h2>Projetos</h2>
-            <span>Sites & Sistemas Desenvolvidos Recentemente</span>
+            <h2>Projects</h2>
+            <span>Recently Developed Websites and Systems</span>
           </div>
 
           <div class="blog-grid-container">

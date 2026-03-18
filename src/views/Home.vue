@@ -182,7 +182,7 @@ const closeLightbox = () => {
           </div>
 
           <div class="card toggle flex-[1.5] card-toggle">
-            Nova Funcionalidade em Desenvolvimento
+            New feature in development
           </div>
         </div>
       </div>

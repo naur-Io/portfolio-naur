@@ -24,7 +24,7 @@
     </div>
 
     <p class="intro-description">
-      Engenheiro de software, Fotografia e Narrativa Audio-Visual
+      Software engineer, Photography and Audio-Visual Storytelling
     </p>
   </div>
 </template>

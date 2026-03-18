@@ -14,9 +14,9 @@ export const projectsData = {
     title: "About Me",
     subtitle: "Software Engineer & Visual Creative",
     story:
-      "Engenheiro de software. Simultaneamente, experimento o nomadismo digital, exercendo meu trabalho enquanto estou em constante movimento, explorando novos destinos.",
+      "Software engineer. Simultaneously, I experience digital nomadism, working while constantly on the move, exploring new destinations.",
     current:
-      "Atualmente, crio soluções e sistemas completos para a internet, desde pequenos sistemas até sistemas mais robustos com integração de modelos de Inteligência Artificial e aplicação de Testes de Automatizados. \nAlém disso, mantenho a fotografia e o storytelling como atividades paralelas. Tenho experiência em web design e produção visual e audiovisual.",
+      "Currently, I create complete internet solutions and systems, from small systems to more robust systems integrating Artificial Intelligence models and applying Automated Testing. In addition, I pursue photography and storytelling as side activities. I have experience in web design and visual and audiovisual production.",
     experience: [
       {
         role: "Software Engineer",
@@ -51,12 +51,12 @@ export const projectsData = {
     ],
     skills: [
       {
-        title: "Engenheiro de Software",
-        desc: "Tenho experiência prática em desenvolvimento de software, com foco em aplicações web Full-stack. Trabalho principalmente com tecnologias do ecossistema Java & Typescript, priorizando arquitetura definida, desempenho e testes de software como pilares centrais de cada projeto.",
+        title: "Software Engineer",
+        desc: "I have practical experience in software development, focusing on full-stack web applications. I primarily work with Java and TypeScript ecosystem technologies, prioritizing defined architecture, performance, and software testing as central pillars of each project..",
       },
       {
-        title: "Fotografia & Direção Estética",
-        desc: "A fotografia integra o modo como crio narrativas visuais. Além de colaborar com ONGs e projetos de ecoturismo, Campings e outros projetos por meio da fotografia e da presença digital, busco trabalhar a pessoas e a atmosfera para transmitir identidade e significado às imagens e vídeos verticais e horizontais.",
+        title: "Photography and Aesthetic Direction",
+        desc: "Photography is integral to how I create visual narratives. In addition to collaborating with NGOs and ecotourism projects, campsites, and other initiatives through photography and digital presence, I strive to work with people and atmosphere to convey identity and meaning through vertical and horizontal images and videos.",
       },
     ],
     stack: [
@@ -115,15 +115,15 @@ export const projectsData = {
   id: "mobile1",
   type: "case-study",
   title: "Feature in Development",
-  subtitle: "Projeto em desenvolvimento",
+  subtitle: "Projeto em desehttp://localhost:5173/nvolvimento",
   company: "To Be Defined",
   role: "To Be Defined",
   tools: ["Tbd"],
   timeline: "2026",
   description:
-    "Em Desenvolvimento",
+    "In Development",
   context:
-    "Em Desenvolvimento",
+    "In Development",
   image:
     "https://images.unsplash.com/photo-1616469829941-c7200edec809?q=80&w=2070&auto=format&fit=crop",
   thumb:
@@ -132,8 +132,8 @@ export const projectsData = {
   blogs: {
     id: "blogs",
     type: "blog-list",
-    title: "Escrita sobre estudos de Tecnologia",
-    subtitle: "Pensamentos, Tutoriais e Insights de Estudos sobre Tecnologia",
+    title: "Writing Technology Studies",
+    subtitle: "Thoughts, Tutorials, and Insights from Technology Studies",
     thumb:
       "https://images.pexels.com/photos/5951544/pexels-photo-5951544.jpeg?_gl=1*8vy6cx*_ga*MTc1OTQzMDY0Ny4xNzQ3OTk5OTU1*_ga_8JE65Q40S6*czE3NzAxNDMyOTIkbzEwJGcxJHQxNzcwMTQzMzMwJGoyMiRsMCRoMA..",
   },
@@ -143,9 +143,8 @@ export const projectsData = {
     title: "Visual Portfolio",
     subtitle: "Direção de Fotografia e Design Audiovisual",
     scrollText: [
-      "Na fotografia, procuro explorar narrativas visuais que falem através de sensações",
-      "Paisagens, lugares afastados e isolados, para mim, são espaços onde o gradenza e o silêncio revelam uma sensação de presença, imensidão e contemplação",
-      "",
+      "In photography, I seek to explore visual narratives that speak through sensations.",
+      "Landscapes, remote and isolated places, for me, are spaces where grandeur and silence reveal a sense of presence, immensity, and contemplation.",
     ],
     gallery: [
       {
@@ -160,7 +159,8 @@ export const projectsData = {
           "https://www.behance.net/gallery/245155443/Valley-of-the-Moon",
       },
        {
-        id: UFPEGarden,
+        id: 1,
+        src:UFPEGarden,
         behanceUrl:
           "https://www.behance.net/gallery/246002465/UFPE-Garden",
       },

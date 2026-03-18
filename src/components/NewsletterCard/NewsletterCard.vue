@@ -33,7 +33,7 @@ const subscribeNewsletter = async () => {
 <template>
   <div class="newsletter-content">
     <h3 class="newsletter-description">
-      Conteúdos e insights enviados direto para o seu e-mail.
+      Content and insights sent directly to your email
     </h3>
 
     <form class="newsletter-form" @submit.prevent="subscribeNewsletter">
@@ -41,7 +41,7 @@ const subscribeNewsletter = async () => {
         <input
           type="email"
           v-model="email"
-          placeholder="Seu endereço de E-mail"
+          placeholder="You email address"
           required
           class="email-input"
         />

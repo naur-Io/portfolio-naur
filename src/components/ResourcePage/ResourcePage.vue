@@ -47,26 +47,26 @@ const emit = defineEmits(["close"]);
                     class="check-app-btn"
                     target="_blank"
                   >
-                    Acesse no Github <span>↗</span>
+                    See in Github <span>↗</span>
                   </a>
                   <a
                     :href="resource.previewUrl"
                     class="github-btn"
                     target="_blank"
                   >
-                    Acesso Ao Vivo
+                    Live Deploy
                   </a>
                 </div>
               </div>
 
               <div class="resource-col-right">
                 <div class="resource-description">
-                  <h3>Descrição</h3>
+                  <h3>Description</h3>
                   <p>{{ resource.description }}</p>
                 </div>
 
                 <div class="resource-features">
-                  <h3>Funcionalidades</h3>
+                  <h3>Features</h3>
                   <ul class="features-list">
                     <li
                       v-for="(feature, index) in resource.features"

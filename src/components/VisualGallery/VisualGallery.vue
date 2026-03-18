@@ -55,7 +55,7 @@ onUnmounted(() => {
     </div>
 
     <div class="gallery-section-title">
-      <h3>Obras em evidência</h3>
+      <h3>Recents Shoots</h3>
       <div class="divider"></div>
     </div>
 

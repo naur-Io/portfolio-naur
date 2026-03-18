@@ -1,9 +1,9 @@
 <template>
   <div class="card about interactive-card card-about" @click="$emit('click')">
     <div class="about-content">
-      <h1 class="about-title">Sobre mim</h1>
+      <h1 class="about-title">About</h1>
       <p class="about-description">
-        Saiba um pouco mais sobre quem eu sou e o que faço.
+       know a little more about my kind of work
       </p>
     </div>
     <div class="about-arrow-circle">

@@ -12,8 +12,8 @@ export const resourcesData = [
     price: "Freelance Project",
     area: "Frontend",
     description:
-      "Desenvolvimento de um website de portfólio profissional para a Carol Print Shop. Construído com HTML, CSS, JavaScript e uma API RESTful para buscar e exibir conteúdo dinamicamente. Um website simples, moderno e funcional, focado na apresentação de serviços e produtos.",
-    features: ["Layout Reponsivo", "Carregamento Dinâmico via REST API"],
+      "Development of a professional portfolio website for Carol Print Shop. Built with HTML, CSS, JavaScript, and a RESTful API to dynamically retrieve and display content. A simple, modern, and functional website focused on showcasing services and products.",
+    features: ["Responsive Layout", "Dynamic Loading via REST API"],
     previewUrl: "https://carolgrafica.com.br/",
     getUrl: "https://github.com/naur-Io/CarolCopiadoraKM",
     image: carolPrintShopImg,
@@ -26,12 +26,9 @@ export const resourcesData = [
     price: "Freelance Project",
     area: "Frontend",
     description:
-      "Site de vendas da Carol Esportes, uma loja local de artigos esportivos. Projetado para exibir e vender itens esportivos de alta qualidade com uma experiência de usuário fluida e um layout responsivo.",
+      "Carol Esportes' sales website, a local sporting goods store. Designed to display and sell high-quality sporting goods with a fluid user experience and a responsive layout.",
     features: [
-      "Catálogo de produtos por categoria",
-      "Design totalmente responsivo",
-      "Carregamento rápido e navegação suave",
-    ],
+      "Product catalog by category","Fully responsive design","Fast loading and smooth navigation"],
     previewUrl: "https://carol-sports-km.vercel.app/",
     getUrl: "https://github.com/SrLuc/CarolSportsKM",
     image: carolSportsImg,
@@ -39,25 +36,6 @@ export const resourcesData = [
   },
   {
     id: 3,
-    title: "Personal Trainer Portfolio",
-    subtitle: "Vue.js + TypeScript",
-    price: "Freelance Project",
-    area: "Frontend",
-    description:
-      "Portfólio online moderno para Mateus Pinho, personal trainer. Desenvolvido com Vue.js e TypeScript, seguindo um design limpo inspirado no Linktree. Destaca sua formação, certificações, planos de treinamento e serviços de coaching. O site é totalmente responsivo, garantindo uma experiência fluida em dispositivos móveis e desktops.",
-    features: [
-      "Arquitetura de Componentes em Vue.js",
-      "TypeScript para segurança de tipos",
-      "Layout minimalista inspirado no Linktree",
-      "Design responsivo com foco em dispositivos móveis",
-    ],
-    previewUrl: "https://pinho-port.vercel.app/",
-    getUrl: "https://github.com/SrLuc/PinhoPort",
-    image: pinhoPort,
-    techStack: ["Vue.js", "TypeScript"],
-  },
-  {
-    id: 4,
     title: "WhatsApp Finance Bot",
     subtitle: "Node.js + WhatsApp API",
     price: "Projeto Pessoal",

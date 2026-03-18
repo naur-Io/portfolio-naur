@@ -102,9 +102,12 @@ const handleSkillTouchEnd = () => {
   const swipeDistanceY = touchEndY.value - touchStartY.value;
 
   // Check if horizontal swipe is more significant than vertical
-  if (Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY) && Math.abs(swipeDistanceX) > minSwipeDistance) {
+  if (
+    Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY) &&
+    Math.abs(swipeDistanceX) > minSwipeDistance
+  ) {
     skillTransition.value = true;
-    
+
     setTimeout(() => {
       if (swipeDistanceX > 0) {
         // Swipe right - previous skill
@@ -113,9 +116,10 @@ const handleSkillTouchEnd = () => {
           props.data.skills.length;
       } else {
         // Swipe left - next skill
-        currentSkill.value = (currentSkill.value + 1) % props.data.skills.length;
+        currentSkill.value =
+          (currentSkill.value + 1) % props.data.skills.length;
       }
-      
+
       setTimeout(() => {
         skillTransition.value = false;
       }, 50);
@@ -153,9 +157,12 @@ const handleImageTouchEnd = () => {
   const swipeDistanceY = imageTouchEndY.value - imageTouchStartY.value;
 
   // Check if horizontal swipe is more significant than vertical
-  if (Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY) && Math.abs(swipeDistanceX) > minSwipeDistance) {
+  if (
+    Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY) &&
+    Math.abs(swipeDistanceX) > minSwipeDistance
+  ) {
     imageTransition.value = true;
-    
+
     setTimeout(() => {
       if (swipeDistanceX > 0) {
         // Swipe right - previous image
@@ -167,7 +174,7 @@ const handleImageTouchEnd = () => {
         currentAboutImage.value =
           (currentAboutImage.value + 1) % props.data.gallery.length;
       }
-      
+
       setTimeout(() => {
         imageTransition.value = false;
       }, 50);
@@ -189,18 +196,18 @@ const handleImageTouchEnd = () => {
       <div class="about-column-left">
         <!-- Story Card -->
         <div class="about-card story-card">
-          <h2 class="about-title">Um pouco do que me move</h2>
+          <h2 class="about-title">Life is movement</h2>
 
-          <div class="about-label">SOBRE MIM</div>
+          <div class="about-label">ABOUT ME</div>
           <p class="story-text">{{ data.story }}</p>
 
-          <div class="about-label label-mt">O QUE FAÇO AGORA</div>
+          <div class="about-label label-mt">WHAT I CURRENTLY DO</div>
           <p class="story-text">{{ data.current }}</p>
         </div>
 
         <!-- Experience Card -->
         <div class="about-card experience-card">
-          <div class="about-label">EXPERIÊNCIA</div>
+          <div class="about-label">Company Experince</div>
 
           <ul class="experience-list">
             <li
@@ -230,7 +237,10 @@ const handleImageTouchEnd = () => {
             @touchmove="handleSkillTouchMove"
             @touchend="handleSkillTouchEnd"
           >
-            <div class="carousel-slide" :class="{ 'slide-transition': skillTransition }">
+            <div
+              class="carousel-slide"
+              :class="{ 'slide-transition': skillTransition }"
+            >
               <h3 class="skill-title">
                 {{ data.skills[currentSkill].title }}
               </h3>
@@ -268,13 +278,16 @@ const handleImageTouchEnd = () => {
         <!-- Bottom Split -->
         <div class="about-bottom-split">
           <!-- Image Slider -->
-          <div 
+          <div
             class="about-card image-carousel-card"
             @touchstart="handleImageTouchStart"
             @touchmove="handleImageTouchMove"
             @touchend="handleImageTouchEnd"
           >
-            <div class="image-slide" :class="{ 'image-transition': imageTransition }">
+            <div
+              class="image-slide"
+              :class="{ 'image-transition': imageTransition }"
+            >
               <img
                 :src="data.gallery[currentAboutImage]"
                 alt="Me"
@@ -302,7 +315,7 @@ const handleImageTouchEnd = () => {
 
           <!-- Contact -->
           <div class="about-card contact-card">
-            <h3 class="contact-title">Tem algum projeto em mente?</h3>
+            <h3 class="contact-title">Any ideas in mind ?</h3>
             <button class="copy-email-btn" @click="contactMe">
               <p>{{ contactMessage || "Contact Me" }}</p>
             </button>
@@ -442,7 +455,9 @@ const handleImageTouchEnd = () => {
 .carousel-slide {
   opacity: 1;
   transform: translateX(0);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 .carousel-slide.slide-transition {
   opacity: 0;
@@ -537,7 +552,9 @@ const handleImageTouchEnd = () => {
   height: 100%;
   opacity: 1;
   transform: scale(1);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 .image-slide.image-transition {
   opacity: 0;

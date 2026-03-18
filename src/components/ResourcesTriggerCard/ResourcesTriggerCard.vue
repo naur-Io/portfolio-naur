@@ -4,8 +4,8 @@
     @click="$emit('click')"
   >
     <div class="resources-content">
-      <h1>Projetos Recentes</h1>
-      <p>Veja alguns dos meus trabalhos mais recentes.</p>
+      <h1>Recent Projects</h1>
+      <p>See some of my most recent works</p>
     </div>
     <div class="resources-arrow-circle">
       <svg

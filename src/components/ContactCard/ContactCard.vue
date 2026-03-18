@@ -24,8 +24,8 @@ const copyEmail = async () => {
 <template>
   <div class="contact-content">
     <div class="contact-text">
-      <h3 class="contact-title">Tem algum projeto em mente?</h3>
-      <p class="contact-subtitle">Vamos criar algo incrível em parceria.</p>
+      <h3 class="contact-title">Do you have any projects in mind?</h3>
+      <p class="contact-subtitle">Let's create something.</p>
       <div class="contact-actions">
         <div class="contact-link" @click="copyEmail">
           <span>ruanrickelmeramos@gmail.com</span>
