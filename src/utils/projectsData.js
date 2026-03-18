@@ -5,6 +5,7 @@ import me3 from "../assets/me-assets/me3.jpeg";
 //Visual Gallery Photos
 import maryinolinda from "../assets/visualGallery-assets/v1.png";
 import valleyofthemoon from "../assets/visualGallery-assets/v2.jpg";
+import UFPEGarden from "../assets/visualGallery-assets/v3.jpg"
 
 export const projectsData = {
   about: {
@@ -159,8 +160,7 @@ export const projectsData = {
           "https://www.behance.net/gallery/245155443/Valley-of-the-Moon",
       },
        {
-        id: 3,
-        src: "UFPE Garden",
+        id: UFPEGarden,
         behanceUrl:
           "https://www.behance.net/gallery/246002465/UFPE-Garden",
       },
