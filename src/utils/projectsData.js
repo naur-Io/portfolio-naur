@@ -13,17 +13,17 @@ export const projectsData = {
     title: "About Me",
     subtitle: "Software Engineer & Visual Creative",
     story:
-      "Engenheiro de software brasileiro que procura manter a técnica e criatividade na criação de sites e sistemas. Simultaneamente, experimento o nomadismo digital, exercendo meu trabalho enquanto exploro novos destinos e culturas.",
+      "Engenheiro de software. Simultaneamente, experimento o nomadismo digital, exercendo meu trabalho enquanto estou em constante movimento, explorando novos destinos.",
     current:
-      "Atualmente, desenvolvo soluções e sistemas completos para a internet, abrangendo desde pequenos sistemas até a integração com Inteligência Artificial em sistemas robustos e a aplicação de Testes de Automatizados em softwares. \nAlém disso, mantenho a fotografia e o storytelling como atividades paralelas. Tenho experiência em web design e produção visual e audiovisual.",
+      "Atualmente, crio soluções e sistemas completos para a internet, desde pequenos sistemas até sistemas mais robustos com integração de modelos de Inteligência Artificial e aplicação de Testes de Automatizados. \nAlém disso, mantenho a fotografia e o storytelling como atividades paralelas. Tenho experiência em web design e produção visual e audiovisual.",
     experience: [
       {
-        role: "QA Engineer",
+        role: "Software Engineer",
         company: "CIn - UFPE",
-        date: "Current",
+        date: "2026",
       },
       {
-        role: "Software Engineer",
+        role: "QA Engineer",
         company: "Motorola",
         date: "2026",
       },
@@ -142,10 +142,9 @@ export const projectsData = {
     title: "Visual Portfolio",
     subtitle: "Direção de Fotografia e Design Audiovisual",
     scrollText: [
-      "Na fotografia, procuro desenvolver narrativas visuais que falem sem palavras",
-      "Tenho preferência por paisagens e lugares afastados e mais isolados, espaços onde a natureza e o silêncio revelam uma sensação de contemplação",
-      "Também tenho um olhar curioso por eventos culturais e sociais, buscando capturar a essência das interações entre as pessoas e a cidade",
-      "Esses cenários acompanham meu desejo constante de explorar e observar o mundo com presença",
+      "Na fotografia, procuro explorar narrativas visuais que falem através de sensações",
+      "Paisagens, lugares afastados e isolados, para mim, são espaços onde o gradenza e o silêncio revelam uma sensação de presença, imensidão e contemplação",
+      "",
     ],
     gallery: [
       {
@@ -158,6 +157,12 @@ export const projectsData = {
         src: valleyofthemoon,
         behanceUrl:
           "https://www.behance.net/gallery/245155443/Valley-of-the-Moon",
+      },
+       {
+        id: 3,
+        src: "UFPE Garden",
+        behanceUrl:
+          "https://www.behance.net/gallery/246002465/UFPE-Garden",
       },
     ],
     thumb:
