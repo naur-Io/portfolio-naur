@@ -24,7 +24,7 @@
     </div>
 
     <p class="intro-description">
-      Engenheiro de software movido por tecnologia, fotografia e narrativa visual
+      Engenheiro de software, fotografia e narrativa audio-visual
     </p>
   </div>
 </template>
@@ -91,6 +91,7 @@
   color: #aaa;
   margin: 0;
   max-width: 100%;
+  padding-bottom: 5px;
   flex: 1;
   font-size: var(--font-size-body-md);
   font-weight: var(--font-weight-regular);
