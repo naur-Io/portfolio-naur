@@ -20,12 +20,12 @@ export const projectsData = {
     experience: [
       {
         role: "Software Engineer",
-        company: "CIn - UFPE",
+        company: "Motorola CIn/UFPE",
         date: "2026",
       },
       {
         role: "QA Engineer",
-        company: "Motorola",
+        company: "Motorola CIn/UFPE",
         date: "2026",
       },
       {
