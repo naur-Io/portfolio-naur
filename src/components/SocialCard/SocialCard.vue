@@ -7,12 +7,37 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
 <template>
   <div class="card social-icons card-social">
     <div class="social-grid-inner">
+      <!--Youtube-->
+      <a
+        href="https://www.youtube.com/@por_naur"
+        target="_blank"
+        class="social-item"
+      >
+        <img
+          class="soundclound-img"
+          src="https://cdn-icons-png.flaticon.com/512/152/152810.png"
+          alt=""
+        />
+      </a>
       <!--Github-->
       <a href="https://github.com/naur-Io" target="_blank" class="social-item">
         <img
           class="soundclound-img"
           src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png"
           alt=""
+        />
+      </a>
+
+      <!--LinkedIn-->
+      <a
+        href="https://www.linkedin.com/in/ruan-rickelme-ramos-387623232/"
+        target="_blank"
+        class="social-item"
+      >
+        <img
+          class="soundclound-img"
+          src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png"
+          alt="Linkedin-icon"
         />
       </a>
 
@@ -38,32 +63,6 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
         <img class="soundclound-img" :src="soundcloudimage" alt="" />
       </a>
 
-      <!--LinkedIn-->
-      <a
-        href="https://www.linkedin.com/in/ruan-rickelme-ramos-387623232/"
-        target="_blank"
-        class="social-item"
-      >
-        <img
-          class="soundclound-img"
-          src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png"
-          alt="Linkedin-icon"
-        />
-      </a>
-
-      <!--Youtube-->
-      <a
-        href="https://www.youtube.com/@bynaur"
-        target="_blank"
-        class="social-item"
-      >
-        <img
-          class="soundclound-img"
-          src="https://cdn-icons-png.flaticon.com/512/152/152810.png"
-          alt=""
-        />
-      </a>
-
       <!--Mail-->
       <a
         href="https://www.worldpackers.com/users/5593360"
@@ -87,8 +86,8 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
   filter: invert(1);
 }
 
-.worldpackers-img{
-   filter: invert(1);
+.worldpackers-img {
+  filter: invert(1);
 }
 
 .social-icons {
