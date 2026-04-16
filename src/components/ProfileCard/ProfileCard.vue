@@ -1,5 +1,5 @@
 <script setup>
-const profileImage = new URL("../../assets/yo.jpeg", import.meta.url).href;
+const profileImage = new URL("../../assets/yo2.jpg", import.meta.url).href;
 const profileImage2 = new URL("../../assets/me-assets/me2.jpeg", import.meta.url).href;
 </script>
 
