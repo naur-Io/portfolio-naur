@@ -20,7 +20,7 @@ import StackCard from "../components/StackCard/StackCard.vue";
 // Assets
 const beachGif = new URL("../assets/beach.gif", import.meta.url).href;
 const blogGif = new URL("../assets/blog.gif", import.meta.url).href;
-const projectGif = new URL("../assets/projectgif.gif", import.meta.url).href;
+const projectGif = new URL("../assets/vd2.gif", import.meta.url).href;
 
 // State
 const isModalOpen = ref(false);
@@ -154,7 +154,7 @@ const closeLightbox = () => {
       <div class="main-col flex-[1.7]">
         <div class="row-flex flex-[0.6]">
           <ProjectCard
-            title="LAY"
+            title="Content Creator"
             :bgImage="projectGif"
             customClass="card project-mobile interactive-card card-cashless"
             @click="openModal('mobile1')"

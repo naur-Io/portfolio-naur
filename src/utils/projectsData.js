@@ -7,6 +7,12 @@ import maryinolinda from "../assets/visualGallery-assets/v1.png";
 import valleyofthemoon from "../assets/visualGallery-assets/v2.jpg";
 import UFPEGarden from "../assets/visualGallery-assets/v3.jpg"
 
+//content creator photos
+import me4 from "../assets/vd2.gif";
+import me5 from "../assets/vd.gif";
+
+ 
+
 export const projectsData = {
   about: {
     id: "about",
@@ -114,18 +120,18 @@ export const projectsData = {
  mobile1: {
   id: "mobile1",
   type: "case-study",
-  title: "Feature in Development",
-  subtitle: "Projeto em desehttp://localhost:5173/nvolvimento",
-  company: "To Be Defined",
-  role: "To Be Defined",
-  tools: ["Tbd"],
+  title: "Digital Content Creator",
+  subtitle: "editing videos and creating thumbnails for YouTube and social networks, focusing on simple content, attractive visuals and greater engagement.",
+  company: "NAUR",
+  role: "Youtuber Thumbnail Designer and Video Editor",
+  tools: ["DaVinci Resolver, Adobe Photoshop"],
   timeline: "2026",
   description:
-    "In Development",
+    "As a Digital Content Creator at NAUR, I focus on editing videos and creating thumbnails for YouTube and social networks. My goal is to produce simple yet engaging content with attractive visuals.",
   context:
-    "In Development",
+    "I collaborate with other creators and clients to understand their vision and deliver high-quality content that meets their needs",
   image:
-    "https://images.unsplash.com/photo-1616469829941-c7200edec809?q=80&w=2070&auto=format&fit=crop",
+    me5,
   thumb:
     "https://images.unsplash.com/photo-1621111848501-8d3634f82336?q=80&w=1000&auto=format&fit=crop",
 },
