@@ -439,13 +439,15 @@ const closeLightbox = () => {
     order: 3;
   }
   .card-profile {
-    order: 2;
+    order: 7;
     aspect-ratio: auto;
     height: 250px;
   }
   .card-cashless {
-    order: 7;
-    min-height: 180px;
+    order: 2;
+    min-height: 270px;
+
+
   }
   .card-blogs {
     order: 5;

@@ -47,7 +47,7 @@ defineProps({
 
           <a href="https://www.behance.net/rickelmeramos" class="check-app-btn"> 
             Behance
-            <span>↗</span>
+            <span>↗</span> 
           </a>
         </div>
       </div>
