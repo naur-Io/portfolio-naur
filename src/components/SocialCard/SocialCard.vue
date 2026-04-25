@@ -1,7 +1,12 @@
 <script setup>
 import { ref } from "vue";
 
+import ytgif from "../../assets/social-assets/yt.gif";
+import gitgif from "../../assets/social-assets/github.gif";
 import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
+import behancegif from "../../assets/social-assets/be.gif";
+import soundcloudgif from "../../assets/social-assets/sound.gif";
+import linkedingif from "../../assets/social-assets/linkedin.gif";
 </script>
 
 <template>
@@ -13,19 +18,19 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
         target="_blank"
         class="social-item"
       >
-        <img
-          class="soundclound-img"
-          src="https://cdn-icons-png.flaticon.com/512/152/152810.png"
-          alt=""
-        />
+        <img class="youtube-img" :src="ytgif" alt="" />
       </a>
       <!--Github-->
       <a href="https://github.com/naur-Io" target="_blank" class="social-item">
-        <img
-          class="soundclound-img"
-          src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png"
-          alt=""
-        />
+        <img class="github-img" :src="gitgif" alt="" />
+      </a>
+      <!--Behance-->
+      <a
+        href="https://www.behance.net/rickelmeramos"
+        target="_blank"
+        class="social-item"
+      >
+        <img class="behance-img" :src="behancegif" alt="Behance-icon" />
       </a>
 
       <!--LinkedIn-->
@@ -34,24 +39,7 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
         target="_blank"
         class="social-item"
       >
-        <img
-          class="soundclound-img"
-          src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png"
-          alt="Linkedin-icon"
-        />
-      </a>
-
-      <!--Behance-->
-      <a
-        href="https://www.behance.net/rickelmeramos"
-        target="_blank"
-        class="social-item"
-      >
-        <img
-          class="soundclound-img"
-          src="https://cdn-icons-png.flaticon.com/512/2168/2168249.png"
-          alt=""
-        />
+        <img class="linkedin-img" :src="linkedingif" alt="Linkedin-icon" />
       </a>
 
       <!--Soundcloud-->
@@ -60,7 +48,11 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
         class="social-item"
         target="_blank"
       >
-        <img class="soundclound-img" :src="soundcloudimage" alt="" />
+        <img
+          class="soundcloud-img"
+          :src="soundcloudgif"
+          alt="Soundcloud-icon"
+        />
       </a>
 
       <!--Mail-->
@@ -80,10 +72,35 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
 </template>
 
 <style scoped>
+.soundcloud-img {
+  width: 75px;
+  height: 75px;
+}
+
+.behance-img {
+  width: 75px;
+  height: 75px;
+}
+
+.linkedin-img {
+  width: 75px;
+  height: 75px;
+}
+
 .soundclound-img {
   width: 50px;
   height: 50px;
   filter: invert(1);
+}
+
+.github-img {
+  width: 75px;
+  height: 75px;
+}
+
+.youtube-img {
+  width: 75px;
+  height: 75px;
 }
 
 .worldpackers-img {
@@ -94,12 +111,6 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
   background-color: transparent !important;
   border: none !important;
   padding: 0 !important;
-}
-
-.youtube-img {
-  width: 40px;
-  height: 40px;
-  filter: invert(1);
 }
 
 .social-grid-inner {
