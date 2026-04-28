@@ -7,6 +7,7 @@ import soundcloudimage from "../../assets/social-assets/social-soundcloud.png";
 import behancegif from "../../assets/social-assets/be.gif";
 import soundcloudgif from "../../assets/social-assets/sound.gif";
 import linkedingif from "../../assets/social-assets/linkedin.gif";
+import vsco from "../../assets/social-assets/vsco.png";
 </script>
 
 <template>
@@ -57,14 +58,14 @@ import linkedingif from "../../assets/social-assets/linkedin.gif";
 
       <!--Mail-->
       <a
-        href="https://www.worldpackers.com/users/5593360"
+        href="https://vsco.co/bynaur/gallery"
         target="_blank"
         class="social-item"
       >
         <img
           class="worldpackers-img"
-          src="https://framerusercontent.com/images/h0dqZHVhCuoYtnshSHCCiUOTLs.png"
-          alt=""
+          :src="vsco"
+          alt="vsco-icon"
         />
       </a>
     </div>
