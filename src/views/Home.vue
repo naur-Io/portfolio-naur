@@ -458,6 +458,7 @@ const closeLightbox = () => {
   }
   .card-resources {
     order: 5;
+    min-height: 270px;
   }
 
   .stack-toggle-container {

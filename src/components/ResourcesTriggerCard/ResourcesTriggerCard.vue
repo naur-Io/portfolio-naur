@@ -1,6 +1,8 @@
+
+
 <template>
   <div
-    class="card resources interactive-card card-resources"
+    class="card resources interactive-card card-resources bg"
     @click="$emit('click')"
   >
     <div class="resources-content">
@@ -23,6 +25,14 @@
 </template>
 
 <style scoped>
+
+.bg{
+  background-image: url(../../assets/code-coding2.gif);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s;
+}
+
 .resources-content {
   padding: 12px 16px;
   position: relative;
@@ -30,7 +40,7 @@
 }
 
 .resources-content > h1 {
-  color: #333;
+  color: #f3f1f1;
   margin-bottom: 12px;
   font-size: 24px;
   font-weight: var(--font-weight-medium);
