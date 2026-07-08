@@ -1,6 +1,5 @@
 //import images
 import carolPrintShopImg from "../assets/projects-assets/carol-print.gif";
-import carolSportsImg from "../assets/projects-assets/carol-sports.gif";
 import wpbot from "../assets/projects-assets/wp-bot.png";
 
 export const resourcesData = [
