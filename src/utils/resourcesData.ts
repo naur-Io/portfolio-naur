@@ -20,21 +20,6 @@ export const resourcesData = [
   },
   {
     id: 2,
-    title: "Carol Esportes - E-commerce",
-    subtitle: "HTML/CSS/JavaScript",
-    price: "Freelance Project",
-    area: "Frontend",
-    description:
-      "Carol Esportes' sales website, a local sporting goods store. Designed to display and sell high-quality sporting goods with a fluid user experience and a responsive layout.",
-    features: [
-      "Product catalog by category","Fully responsive design","Fast loading and smooth navigation"],
-    previewUrl: "https://carol-sports-km.vercel.app/",
-    getUrl: "https://github.com/SrLuc/CarolSportsKM",
-    image: carolSportsImg,
-    techStack: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    id: 3,
     title: "WhatsApp Finance Bot",
     subtitle: "Node.js + WhatsApp API",
     price: "Projeto Pessoal",
