@@ -5,13 +5,15 @@ import me3 from "../assets/me-assets/me3.jpeg";
 //Visual Gallery Photos
 import maryinolinda from "../assets/visualGallery-assets/v1.png";
 import valleyofthemoon from "../assets/visualGallery-assets/v2.jpg";
-import UFPEGarden from "../assets/visualGallery-assets/v3.jpg"
+import UFPEGarden from "../assets/visualGallery-assets/v3.jpg";
+import plantGeometry from "../assets/visualGallery-assets/v4.jpg";
+import angeldoce from "../assets/visualGallery-assets/v6.jpg";
+import bluecave from "../assets/visualGallery-assets/v5.png";
+import cave from "../assets/visualGallery-assets/v7.png";
 
 //content creator photos
 import me4 from "../assets/vd2.gif";
 import me5 from "../assets/vd.gif";
-
- 
 
 export const projectsData = {
   about: {
@@ -117,24 +119,24 @@ export const projectsData = {
     ],
     gallery: [me2, me3],
   },
- mobile1: {
-  id: "mobile1",
-  type: "case-study",
-  title: "Digital Content Creator",
-  subtitle: "editing videos and creating thumbnails for YouTube and social networks, focusing on simple content, attractive visuals and greater engagement.",
-  company: "NAUR",
-  role: "Youtuber Thumbnail Designer and Video Editor",
-  tools: ["DaVinci Resolver, Adobe Photoshop"],
-  timeline: "2026",
-  description:
-    "As a Digital Content Creator at NAUR, I focus on editing videos and creating thumbnails for YouTube and social networks. My goal is to produce simple yet engaging content with attractive visuals.",
-  context:
-    "I collaborate with other creators and clients to understand their vision and deliver high-quality content that meets their needs",
-  image:
-    me5,
-  thumb:
-    "https://images.unsplash.com/photo-1621111848501-8d3634f82336?q=80&w=1000&auto=format&fit=crop",
-},
+  mobile1: {
+    id: "mobile1",
+    type: "case-study",
+    title: "Digital Content Creator",
+    subtitle:
+      "editing videos and creating thumbnails for YouTube and social networks, focusing on simple content, attractive visuals and greater engagement.",
+    company: "NAUR",
+    role: "Youtuber Thumbnail Designer and Video Editor",
+    tools: ["DaVinci Resolver, Adobe Photoshop"],
+    timeline: "2026",
+    description:
+      "As a Digital Content Creator at NAUR, I focus on editing videos and creating thumbnails for YouTube and social networks. My goal is to produce simple yet engaging content with attractive visuals.",
+    context:
+      "I collaborate with other creators and clients to understand their vision and deliver high-quality content that meets their needs",
+    image: me5,
+    thumb:
+      "https://images.unsplash.com/photo-1621111848501-8d3634f82336?q=80&w=1000&auto=format&fit=crop",
+  },
   blogs: {
     id: "blogs",
     type: "blog-list",
@@ -164,11 +166,33 @@ export const projectsData = {
         behanceUrl:
           "https://www.behance.net/gallery/245155443/Valley-of-the-Moon",
       },
-       {
+      {
         id: 1,
-        src:UFPEGarden,
+        src: UFPEGarden,
+        behanceUrl: "https://www.behance.net/gallery/246002465/UFPE-Garden",
+      },
+      {
+        id: 1,
+        src: plantGeometry,
+        behanceUrl: "https://www.behance.net/gallery/254697595/Plants-Geometry",
+      },
+      {
+        id: 1,
+        src: angeldoce,
         behanceUrl:
-          "https://www.behance.net/gallery/246002465/UFPE-Garden",
+          "https://www.behance.net/gallery/254754063/Anjo-da-Lapa-Doce",
+      },
+      {
+        id: 1,
+        src: bluecave,
+        behanceUrl:
+          "https://www.behance.net/gallery/254704425/Beneath-the-Blue",
+      },
+      {
+        id: 1,
+        src: cave,
+        behanceUrl:
+          "https://www.behance.net/gallery/254627671/Cave-Lapa-Doce",
       },
     ],
     thumb:
