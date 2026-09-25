@@ -1,10 +1,55 @@
 //import images
+import carolPrintShopImg from "../assets/projects-assets/carol-print.gif";
 import carolSportsImg from "../assets/projects-assets/carol-sports.gif";
-import wpbot from "../assets/projects-assets/wp-bot.png";
+import cantoAlegre from "../assets/projects-assets/canto-alegre.png";
 
 export const resourcesData = [
   {
     id: 1,
+    title: "Canto Alegre",
+    subtitle: "React / Spring Boot / PWA / Google Gemini AI",
+    price: "Open Source Project",
+    area: "Full Stack",
+    description:
+      "An offline-first Progressive Web App (PWA) and botanical assistant. Uses Google Gemini AI multimodal vision to instantly identify plant species from leaf photos, calculate watering schedules, and provide step-by-step cutting propagation guides.",
+    features: [
+      "AI multimodal photo identification with Google Gemini",
+      "100% offline-first PWA architecture with IndexedDB persistence",
+      "Step-by-step cutting, propagation, and rooting guides",
+      "Automated thirst alerts and daily watering logs",
+      "Bilingual internationalization support (PT-BR / EN)",
+      "Robust REST API built with Spring Boot 3, Java 21, and PostgreSQL",
+    ],
+    previewUrl: "https://canto-alegre-nine.vercel.app/",
+    getUrl: "https://github.com/naur-Io/Canto-Alegre.git",
+    image: cantoAlegre,
+    techStack: [
+      "React 18",
+      "Vite",
+      "PWA / Service Worker",
+      "IndexedDB",
+      "Java 21",
+      "Spring Boot 3",
+      "PostgreSQL",
+      "Google Gemini AI API",
+    ],
+  },
+  {
+    id: 2,
+    title: "Carol Print Shop - Website",
+    subtitle: "HTML/CSS/JS",
+    price: "Freelance Project",
+    area: "Frontend",
+    description:
+      "Development of a professional portfolio website for Carol Print Shop. Built with HTML, CSS, JavaScript, and a RESTful API to dynamically retrieve and display content. A simple, modern, and functional website focused on showcasing services and products.",
+    features: ["Responsive Layout", "Dynamic Loading via REST API"],
+    previewUrl: "https://carolgrafica.com.br/",
+    getUrl: "https://github.com/naur-Io/CarolCopiadoraKM",
+    image: carolPrintShopImg,
+    techStack: ["HTML", "CSS", "JavaScript", "REST API"],
+  },
+  {
+    id: 3,
     title: "Carol Esportes - E-commerce",
     subtitle: "HTML/CSS/JavaScript",
     price: "Freelance Project",
@@ -12,29 +57,13 @@ export const resourcesData = [
     description:
       "Carol Esportes' sales website, a local sporting goods store. Designed to display and sell high-quality sporting goods with a fluid user experience and a responsive layout.",
     features: [
-      "Product catalog by category", "Fully responsive design", "Fast loading and smooth navigation"],
+      "Product catalog by category",
+      "Fully responsive design",
+      "Fast loading and smooth navigation",
+    ],
     previewUrl: "https://carol-sports-km.vercel.app/",
     getUrl: "https://github.com/SrLuc/CarolSportsKM",
     image: carolSportsImg,
     techStack: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    id: 2,
-    title: "WhatsApp Finance Bot",
-    subtitle: "Node.js + WhatsApp API",
-    price: "Projeto Pessoal",
-    area: "Backend",
-    description:
-      "Bot de finanças pessoais para WhatsApp para um acompanhamento rápido das suas finanças diárias. Registre receitas, despesas e anotações financeiras diretamente pelo WhatsApp. Gera relatórios mensais e anuais abrangendo todas as contas, despesas e receitas.",
-    features: [
-      "Registrar receitas/despesas via WhatsApp",
-      "Relatórios financeiros mensais e anuais",
-      "Interface de comando simples",
-      "Pode ser executado em um cartão SIM pessoal",
-    ],
-    previewUrl: "https://github.com/naur-Io/WhatsApp-Finance-Bot",
-    getUrl: "https://github.com/naur-Io/WhatsApp-Finance-Bot",
-    image: wpbot,
-    techStack: ["Node.js", "WhatsApp API", "REST API"],
   },
 ];

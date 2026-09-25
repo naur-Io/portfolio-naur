@@ -167,6 +167,7 @@ const emit = defineEmits(["close", "open-resource"]);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 .blog-card {
