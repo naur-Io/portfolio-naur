@@ -436,28 +436,26 @@ const closeLightbox = () => {
     order: 2;
   }
   .card-about {
-    order: 3;
+    order: 2;
   }
   .card-profile {
-    order: 7;
+    order: 6;
     aspect-ratio: auto;
     height: 250px;
   }
   .card-cashless {
     order: 2;
     min-height: 270px;
-
-
   }
   .card-blogs {
     order: 5;
     min-height: 180px;
   }
   .card-portfolio {
-    order: 4;
+    order: 2;
   }
   .card-resources {
-    order: 5;
+    order: 2;
     min-height: 270px;
   }
 
