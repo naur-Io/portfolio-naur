@@ -1,5 +1,6 @@
+/// <reference types="vitest" />
 import tailwindcss from '@tailwindcss/vite'
-import {defineConfig} from 'vite'
+import {defineConfig} from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 import Markdown from 'vite-plugin-md'
 
@@ -11,4 +12,9 @@ export default defineConfig({
         tailwindcss(), // integra Tailwind CSS
         Markdown(), // transforma Markdown em componente Vue
     ],
+    test: {
+        globals: true,
+        environment: 'jsdom',
+    },
 })
+

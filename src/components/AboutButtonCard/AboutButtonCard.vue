@@ -1,9 +1,9 @@
 <template>
   <div class="card about interactive-card card-about" @click="$emit('click')">
     <div class="about-content">
-      <h1 class="about-title">About</h1>
+      <h1 class="about-title">{{ $t('about.title') }}</h1>
       <p class="about-description">
-       know a little more about my kind of work
+       {{ $t('about.description') }}
       </p>
     </div>
     <div class="about-arrow-circle">

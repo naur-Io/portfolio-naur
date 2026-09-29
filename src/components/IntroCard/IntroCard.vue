@@ -1,10 +1,10 @@
 <template>
   <div class="intro-content">
     <div class="intro-header">
-      <span class="intro-label">Software Enginner</span>
+      <span class="intro-label">{{ $t('intro.role') }}</span>
     </div>
 
-    <h1 class="intro-title">Hi, I'm Naur</h1>
+    <h1 class="intro-title">{{ $t('intro.title') }}</h1>
 
     <div class="intro-location">
       <svg
@@ -24,7 +24,7 @@
     </div>
 
     <p class="intro-description">
-      Software engineer, Photography and Audio-Visual Storytelling
+      {{ $t('intro.description') }}
     </p>
   </div>
 </template>

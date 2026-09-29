@@ -16,6 +16,7 @@ import AboutButtonCard from "../components/AboutButtonCard/AboutButtonCard.vue";
 import NewsletterCard from "../components/NewsletterCard/NewsletterCard.vue";
 import ProjectCard from "../components/ProjectCard/ProjectCard.vue";
 import StackCard from "../components/StackCard/StackCard.vue";
+import LanguageToggle from "../components/LanguageToggle/LanguageToggle.vue";
 
 // Assets
 const beachGif = new URL("../assets/beach.gif", import.meta.url).href;
@@ -154,14 +155,14 @@ const closeLightbox = () => {
       <div class="main-col flex-[1.7]">
         <div class="row-flex flex-[0.6]">
           <ProjectCard
-            title="Content Creator"
+            :title="$t('projects.contentCreator')"
             :bgImage="projectGif"
             customClass="card project-mobile interactive-card card-cashless"
             @click="openModal('mobile1')"
           />
 
           <ProjectCard
-            title="Blogs"
+            :title="$t('projects.blogs')"
             :bgImage="blogGif"
             customClass="card project-mobile interactive-card card-blogs"
             @click="openModal('blogs')"
@@ -169,7 +170,7 @@ const closeLightbox = () => {
         </div>
 
         <ProjectCard
-          title="Visual Portfolio"
+          :title="$t('projects.visualPortfolio')"
           :bgImage="beachGif"
           customClass="card project-laptop flex-[0.6] interactive-card card-portfolio"
           @click="openModal('laptop')"
@@ -182,7 +183,7 @@ const closeLightbox = () => {
           </div>
 
           <div class="card toggle flex-[1.5] card-toggle">
-            New feature in development
+            <LanguageToggle />
           </div>
         </div>
       </div>
