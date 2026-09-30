@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
 
+const { t } = useI18n();
 const email = ref("");
 const isSubscribing = ref(false);
 const subscriptionMessage = ref("");
@@ -11,19 +13,17 @@ const subscribeNewsletter = async () => {
   isSubscribing.value = true;
   subscriptionMessage.value = "";
 
-  // Simulação de chamada API
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
   if (email.value.includes("@")) {
-    subscriptionMessage.value = "🎉 Thank you! Check your email to confirm.";
+    subscriptionMessage.value = t("newsletter.successMsg");
     email.value = "";
 
-    // Limpa a mensagem após 5 segundos
     setTimeout(() => {
       subscriptionMessage.value = "";
     }, 5000);
   } else {
-    subscriptionMessage.value = "Please enter a valid email address.";
+    subscriptionMessage.value = t("newsletter.invalidMsg");
   }
 
   isSubscribing.value = false;
@@ -33,7 +33,7 @@ const subscribeNewsletter = async () => {
 <template>
   <div class="newsletter-content">
     <h3 class="newsletter-description">
-      Content and insights sent directly to your email
+      {{ $t("newsletter.description") }}
     </h3>
 
     <form class="newsletter-form" @submit.prevent="subscribeNewsletter">
@@ -41,12 +41,12 @@ const subscribeNewsletter = async () => {
         <input
           type="email"
           v-model="email"
-          placeholder="You email address"
+          :placeholder="$t('newsletter.emailPlaceholder')"
           required
           class="email-input"
         />
         <button type="submit" class="subscribe-btn" :disabled="isSubscribing">
-          {{ isSubscribing ? "Subscribing..." : "Subscribe" }}
+          {{ isSubscribing ? $t("newsletter.subscribing") : $t("newsletter.subscribe") }}
         </button>
       </div>
 

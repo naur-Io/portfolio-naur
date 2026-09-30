@@ -30,8 +30,8 @@ const emit = defineEmits(["close", "open-resource"]);
 
         <div class="modal-scroll-content">
           <div class="modal-header">
-            <h2>Projects</h2>
-            <span>Recently Developed Websites and Systems</span>
+            <h2>{{ $t("resourceModal.title") }}</h2>
+            <span>{{ $t("resourceModal.subtitle") }}</span>
           </div>
 
           <div class="blog-grid-container">
@@ -54,7 +54,7 @@ const emit = defineEmits(["close", "open-resource"]);
                   class="read-more"
                   @click.prevent="emit('open-resource', resource)"
                 >
-                  Saiba Mais <span>→</span>
+                  {{ $t("resourceModal.learnMore") }} <span>→</span>
                 </a>
               </div>
             </div>

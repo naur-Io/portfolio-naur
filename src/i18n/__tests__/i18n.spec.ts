@@ -7,8 +7,8 @@ describe('i18n Configuration', () => {
     expect(messages['pt-BR']).toBeDefined()
   })
 
-  it('should default to "en" locale', () => {
-    expect(i18n.global.locale.value).toBe('en')
+  it('should default to "pt-BR" locale', () => {
+    expect(i18n.global.locale.value).toBe('pt-BR')
   })
 
   it('should contain matching keys for both locales', () => {

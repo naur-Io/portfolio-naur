@@ -22,20 +22,54 @@ export const messages = {
       blogs: 'Blogs',
       visualPortfolio: 'Visual Portfolio'
     },
+    recentProjects: {
+      title: 'Recent Projects',
+      subtitle: 'See some of my most recent works'
+    },
     stack: {
       title: 'Tech Stack'
     },
     contact: {
-      title: "Let's talk",
-      subtitle: 'Get in touch for projects or collaborations'
+      title: 'Do you have any projects in mind?',
+      subtitle: "Let's create something.",
+      emailCopied: 'Email copied to clipboard!',
+      copyFailed: 'Failed to copy email',
+      anyIdeas: 'Any ideas in mind ?',
+      contactMe: 'Contact Me',
+      emailCopiedShort: 'Email copied!',
+      copyFailedShort: 'Failed to copy'
     },
     resources: {
       title: 'Resources',
       subtitle: 'Explore curated tools and links'
     },
     newsletter: {
-      title: 'Newsletter',
-      subtitle: 'Stay updated with my latest thoughts'
+      description: 'Content and insights sent directly to your email',
+      emailPlaceholder: 'Your email address',
+      subscribe: 'Subscribe',
+      subscribing: 'Subscribing...',
+      successMsg: '🎉 Thank you! Check your email to confirm.',
+      invalidMsg: 'Please enter a valid email address.'
+    },
+    aboutMe: {
+      title: 'Life is movement',
+      labelAbout: 'ABOUT ME',
+      labelCurrent: 'WHAT I CURRENTLY DO',
+      companyExperience: 'Company Experience',
+      whatIDoBest: 'WHAT I DO BEST',
+      stackUse: 'Stack I use',
+      at: 'at'
+    },
+    resourceModal: {
+      title: 'Projects',
+      subtitle: 'Recently Developed Websites and Systems',
+      learnMore: 'Learn More'
+    },
+    resourcePage: {
+      seeGithub: 'See in Github',
+      liveDeploy: 'Live Deploy',
+      description: 'Description',
+      features: 'Features'
     }
   },
   'pt-BR': {
@@ -59,28 +93,62 @@ export const messages = {
       blogs: 'Blogs',
       visualPortfolio: 'Portfólio Visual'
     },
+    recentProjects: {
+      title: 'Projetos Recentes',
+      subtitle: 'Veja alguns dos meus trabalhos mais recentes'
+    },
     stack: {
       title: 'Tecnologias'
     },
     contact: {
-      title: 'Vamos conversar',
-      subtitle: 'Entre em contato para projetos ou colaborações'
+      title: 'Tem algum projeto em mente?',
+      subtitle: 'Vamos criar algo juntos.',
+      emailCopied: 'E-mail copiado para a área de transferência!',
+      copyFailed: 'Falha ao copiar e-mail',
+      anyIdeas: 'Tem alguma ideia em mente?',
+      contactMe: 'Entre em Contato',
+      emailCopiedShort: 'E-mail copiado!',
+      copyFailedShort: 'Falha ao copiar'
     },
     resources: {
       title: 'Recursos',
       subtitle: 'Explore ferramentas e links selecionados'
     },
     newsletter: {
-      title: 'Boletim informativo',
-      subtitle: 'Fique atualizado com minhas publicações'
+      description: 'Conteúdos e insights enviados diretamente para o seu e-mail',
+      emailPlaceholder: 'Seu endereço de e-mail',
+      subscribe: 'Inscrever-se',
+      subscribing: 'Insccrevendo-se...',
+      successMsg: '🎉 Obrigado! Verifique seu e-mail para confirmar.',
+      invalidMsg: 'Por favor, insira um endereço de e-mail válido.'
+    },
+    aboutMe: {
+      title: 'A vida é movimento',
+      labelAbout: 'SOBRE MIM',
+      labelCurrent: 'O QUE FAÇO ATUALMENTE',
+      companyExperience: 'Experiência Profissional',
+      whatIDoBest: 'O QUE FAÇO DE MELHOR',
+      stackUse: 'Tecnologias que utilizo',
+      at: 'na'
+    },
+    resourceModal: {
+      title: 'Projetos',
+      subtitle: 'Sistemas e Websites Desenvolvidos Recentemente',
+      learnMore: 'Saiba Mais'
+    },
+    resourcePage: {
+      seeGithub: 'Ver no GitHub',
+      liveDeploy: 'Acessar Projeto',
+      description: 'Descrição',
+      features: 'Recursos'
     }
   }
 }
 
 export const i18n = createI18n({
   legacy: false,
-  locale: 'en',
-  fallbackLocale: 'en',
+  locale: 'pt-BR',
+  fallbackLocale: 'pt-BR',
   messages
 })
 

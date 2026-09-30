@@ -47,26 +47,26 @@ const emit = defineEmits(["close"]);
                     class="check-app-btn"
                     target="_blank"
                   >
-                    See in Github <span>↗</span>
+                    {{ $t("resourcePage.seeGithub") }} <span>↗</span>
                   </a>
                   <a
                     :href="resource.previewUrl"
                     class="github-btn"
                     target="_blank"
                   >
-                    Live Deploy
+                    {{ $t("resourcePage.liveDeploy") }}
                   </a>
                 </div>
               </div>
 
               <div class="resource-col-right">
                 <div class="resource-description">
-                  <h3>Description</h3>
+                  <h3>{{ $t("resourcePage.description") }}</h3>
                   <p>{{ resource.description }}</p>
                 </div>
 
                 <div class="resource-features">
-                  <h3>Features</h3>
+                  <h3>{{ $t("resourcePage.features") }}</h3>
                   <ul class="features-list">
                     <li
                       v-for="(feature, index) in resource.features"

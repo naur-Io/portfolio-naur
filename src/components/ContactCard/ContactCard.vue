@@ -1,18 +1,20 @@
 <script setup>
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
 
+const { t } = useI18n();
 const contactMessage = ref("");
 
 const copyEmail = async () => {
   try {
     await navigator.clipboard.writeText("ruanrickelmeramos@gmail.com");
-    contactMessage.value = "Email copied to clipboard!";
+    contactMessage.value = t("contact.emailCopied");
 
     setTimeout(() => {
       contactMessage.value = "";
     }, 2000);
   } catch (err) {
-    contactMessage.value = "Failed to copy email";
+    contactMessage.value = t("contact.copyFailed");
 
     setTimeout(() => {
       contactMessage.value = "";
@@ -24,8 +26,8 @@ const copyEmail = async () => {
 <template>
   <div class="contact-content">
     <div class="contact-text">
-      <h3 class="contact-title">Do you have any projects in mind?</h3>
-      <p class="contact-subtitle">Let's create something.</p>
+      <h3 class="contact-title">{{ $t("contact.title") }}</h3>
+      <p class="contact-subtitle">{{ $t("contact.subtitle") }}</p>
       <div class="contact-actions">
         <div class="contact-link" @click="copyEmail">
           <span>ruanrickelmeramos@gmail.com</span>

@@ -5,7 +5,7 @@ import { i18n } from '../../../i18n'
 
 describe('LanguageToggle.vue Component', () => {
   beforeEach(() => {
-    i18n.global.locale.value = 'en'
+    i18n.global.locale.value = 'pt-BR'
   })
 
   it('renders language toggle buttons', () => {
@@ -19,7 +19,7 @@ describe('LanguageToggle.vue Component', () => {
     expect(wrapper.text()).toContain('PT-BR')
   })
 
-  it('highlights active locale button', () => {
+  it('highlights active PT-BR locale button by default', () => {
     const wrapper = mount(LanguageToggle, {
       global: {
         plugins: [i18n]
@@ -27,21 +27,21 @@ describe('LanguageToggle.vue Component', () => {
     })
 
     const buttons = wrapper.findAll('.lang-btn')
-    expect(buttons[0]!.classes()).toContain('active')
-    expect(buttons[1]!.classes()).not.toContain('active')
+    expect(buttons[1]!.classes()).toContain('active')
+    expect(buttons[0]!.classes()).not.toContain('active')
   })
 
-  it('changes locale when PT-BR button is clicked', async () => {
+  it('changes locale when EN button is clicked', async () => {
     const wrapper = mount(LanguageToggle, {
       global: {
         plugins: [i18n]
       }
     })
 
-    const ptBtn = wrapper.findAll('.lang-btn')[1]!
-    await ptBtn.trigger('click')
+    const enBtn = wrapper.findAll('.lang-btn')[0]!
+    await enBtn.trigger('click')
 
-    expect(i18n.global.locale.value).toBe('pt-BR')
-    expect(ptBtn.classes()).toContain('active')
+    expect(i18n.global.locale.value).toBe('en')
+    expect(enBtn.classes()).toContain('active')
   })
 })

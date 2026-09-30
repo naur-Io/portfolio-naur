@@ -6,8 +6,8 @@
     @click="$emit('click')"
   >
     <div class="resources-content">
-      <h1>Recent Projects</h1>
-      <p>See some of my most recent works</p>
+      <h1>{{ $t("recentProjects.title") }}</h1>
+      <p>{{ $t("recentProjects.subtitle") }}</p>
     </div>
     <div class="resources-arrow-circle">
       <svg

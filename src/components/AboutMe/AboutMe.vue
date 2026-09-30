@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const props = defineProps({
   data: Object,
@@ -10,12 +13,12 @@ const contactMessage = ref("");
 const copyEmail = async () => {
   try {
     await navigator.clipboard.writeText("ruanrickelmeramos@gmail.com");
-    contactMessage.value = "Email copied!";
+    contactMessage.value = t("contact.emailCopiedShort");
     setTimeout(() => {
       contactMessage.value = "";
     }, 2000);
   } catch (err) {
-    contactMessage.value = "Failed to copy";
+    contactMessage.value = t("contact.copyFailedShort");
     setTimeout(() => {
       contactMessage.value = "";
     }, 2000);
@@ -196,18 +199,18 @@ const handleImageTouchEnd = () => {
       <div class="about-column-left">
         <!-- Story Card -->
         <div class="about-card story-card">
-          <h2 class="about-title">Life is movement</h2>
+          <h2 class="about-title">{{ $t("aboutMe.title") }}</h2>
 
-          <div class="about-label">ABOUT ME</div>
+          <div class="about-label">{{ $t("aboutMe.labelAbout") }}</div>
           <p class="story-text">{{ data.story }}</p>
 
-          <div class="about-label label-mt">WHAT I CURRENTLY DO</div>
+          <div class="about-label label-mt">{{ $t("aboutMe.labelCurrent") }}</div>
           <p class="story-text">{{ data.current }}</p>
         </div>
 
         <!-- Experience Card -->
         <div class="about-card experience-card">
-          <div class="about-label">Company Experince</div>
+          <div class="about-label">{{ $t("aboutMe.companyExperience") }}</div>
 
           <ul class="experience-list">
             <li
@@ -217,7 +220,7 @@ const handleImageTouchEnd = () => {
             >
               <div class="job-header">
                 <span class="job-role">{{ job.role }}</span>
-                <span class="job-at">at {{ job.company }}</span>
+                <span class="job-at">{{ $t("aboutMe.at") }} {{ job.company }}</span>
               </div>
               <div class="job-date">{{ job.date }}</div>
             </li>
@@ -229,7 +232,7 @@ const handleImageTouchEnd = () => {
       <div class="about-column-right">
         <!-- What I Do Best -->
         <div class="about-card skills-card">
-          <div class="about-label">O QUE FAÇO DE MELHOR</div>
+          <div class="about-label">{{ $t("aboutMe.whatIDoBest") }}</div>
 
           <div
             class="skills-carousel-content"
@@ -263,7 +266,7 @@ const handleImageTouchEnd = () => {
 
         <!-- Stack -->
         <div class="about-card stack-card">
-          <h3 class="stack-title">Stack I use</h3>
+          <h3 class="stack-title">{{ $t("aboutMe.stackUse") }}</h3>
           <div class="stack-icons-wrapper">
             <div
               class="stack-icon-box"
@@ -315,9 +318,9 @@ const handleImageTouchEnd = () => {
 
           <!-- Contact -->
           <div class="about-card contact-card">
-            <h3 class="contact-title">Any ideas in mind ?</h3>
+            <h3 class="contact-title">{{ $t("contact.anyIdeas") }}</h3>
             <button class="copy-email-btn" @click="contactMe">
-              <p>{{ contactMessage || "Contact Me" }}</p>
+              <p>{{ contactMessage || $t("contact.contactMe") }}</p>
             </button>
           </div>
         </div>

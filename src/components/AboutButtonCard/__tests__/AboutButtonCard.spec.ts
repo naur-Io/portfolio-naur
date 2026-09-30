@@ -5,18 +5,18 @@ import { i18n } from '../../../i18n'
 
 describe('AboutButtonCard.vue Component', () => {
   beforeEach(() => {
-    i18n.global.locale.value = 'en'
+    i18n.global.locale.value = 'pt-BR'
   })
 
-  it('renders translated title and description', () => {
+  it('renders translated title and description in Portuguese', () => {
     const wrapper = mount(AboutButtonCard, {
       global: {
         plugins: [i18n]
       }
     })
 
-    expect(wrapper.text()).toContain('About')
-    expect(wrapper.text()).toContain('know a little more about my kind of work')
+    expect(wrapper.text()).toContain('Sobre')
+    expect(wrapper.text()).toContain('conheça um pouco mais sobre o meu tipo de trabalho')
   })
 
   it('emits click event when clicked', async () => {
